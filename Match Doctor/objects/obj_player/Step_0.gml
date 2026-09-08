@@ -1,0 +1,2 @@
+read_controls();
+move();
