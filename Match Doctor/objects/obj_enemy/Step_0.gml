@@ -1,1 +1,2 @@
 pathfind();
+target_foes();
