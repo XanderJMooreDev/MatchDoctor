@@ -6,7 +6,7 @@ walkSpeed = 4;
 runSpeed = 5;
 
 // Defines all objects you can't pass through
-solids = [ obj_temp_solid_block ];
+solids = [ obj_temp_solid_block, obj_temp_ally ];
 
 // Uses keyboard_check to set the directional controls. I'd like to
 // eventually develop a obj_control_manager to allow for controller
@@ -45,15 +45,26 @@ attempt_move = function(moveX, moveY) {
 	// For every solid object listed, the player will check if they
 	// are meet those objects where they want to move. If they're not,
 	// they will move there. Checks separately for x and y so you can't
-	// get stuck on walls
+	// get stuck on walls. wallX & wallY are true if you'll hit a wall
+	wallX = false;
+	wallY = false;
+	
 	for (i = 0; i < array_length(solids); i++) {
-		if !place_meeting(x + moveX, y, solids[i]) {
-			x += moveX;
+		if place_meeting(x + moveX, y, solids[i]) {
+			wallX = true;
 		}
 		
-		if !place_meeting(x, y + moveY, solids[i]) {
-			y += moveY;
+		if place_meeting(x, y + moveY, solids[i]) {
+			wallY = true;
 		}
+	}
+	
+	if !wallX {
+		x += moveX;
+	}
+	
+	if !wallY {
+		y += moveY;
 	}
 }
 

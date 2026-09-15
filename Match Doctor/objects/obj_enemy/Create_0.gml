@@ -99,7 +99,7 @@ target_foes = function() {
 	}
 	
 	if rangeType != "None" {
-		proj = instance_create_layer(x, y, "Characters", obj_enemy_projectile,
+		proj = instance_create_layer(x, y, "Characters", obj_projectile,
 		{
 			target : nearestTarget,
 			type: rangeType
@@ -114,4 +114,13 @@ measure_dist = function(target) {
 	b = abs(y - target.y);
 	
 	return sqrt(sqr(a) + sqr(b));
+}
+
+// This can likely be exactly copied into the ally troops when added
+take_damage = function(damage) {
+	hp -= damage;
+	
+	if hp <= 0 {
+		instance_destroy();
+	}
 }
