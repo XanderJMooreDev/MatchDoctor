@@ -1,0 +1,11 @@
+var key_pickup = keyboard_check_pressed(ord("E"));
+
+if (key_pickup) {
+	var block = instance_place(x+16, y+16, obj_temp_solid_block);
+	
+	if (block != noone) {
+		show_debug_message("Block Found");
+	} else {
+		show_debug_message("none");
+	}
+}
