@@ -5,7 +5,9 @@ image_xscale = .5;
 image_yscale = .5;
 
 fly_at_target = function() {
-	
+	// Checks appropriate distance to the target and points
+	// the sprite. The catch statement deletes the arrow if the target
+	// is killed. Ideally this could be fixed later on but it works
 	try {
 		xDiff = target.x - x;
 		yDiff = target.y - y;
@@ -17,7 +19,7 @@ fly_at_target = function() {
 		return;
 	}
 	
-	// Has hit target
+	// Has hit target, deals damage
 	if abs(xDiff) <= moveSpeed && abs(yDiff) <= moveSpeed {
 		target.take_damage(damage);
 		instance_destroy();

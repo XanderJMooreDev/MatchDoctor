@@ -56,3 +56,13 @@ attempt_move = function(moveX, moveY) {
 		}
 	}
 }
+
+animate = function() {
+	// Selects sprite based on conditions
+	if velocityX != 0 || velocityY != 0 {
+		sprite_index = spr_player_run_side;
+	}
+	else {
+		sprite_index = spr_player_idle;
+	}
+}
