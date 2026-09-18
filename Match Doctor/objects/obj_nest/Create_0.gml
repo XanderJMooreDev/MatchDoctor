@@ -1,4 +1,4 @@
-maxHp = 12;
+maxHp = 50;
 hp = maxHp;
 
 // This can likely be exactly copied into the ally troops when added
