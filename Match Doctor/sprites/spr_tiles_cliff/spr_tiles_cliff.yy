@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"spr_tiles_cliff",
   "bboxMode":0,
-  "bbox_bottom":110,
+  "bbox_bottom":111,
   "bbox_left":0,
   "bbox_right":127,
   "bbox_top":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"1fb95ae2-3e3c-4326-bfdf-335de916571d","name":"1fb95ae2-3e3c-4326-bfdf-335de916571d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7fd4199b-ab02-482a-be59-6ea72b0d5880","name":"7fd4199b-ab02-482a-be59-6ea72b0d5880","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":112,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"e4a68798-41f2-4263-8a9e-07c3fb1862ab","blendMode":0,"displayName":"default","isLocked":false,"name":"e4a68798-41f2-4263-8a9e-07c3fb1862ab","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"18c6f7d8-40af-4c65-ac58-5fedad69cae2","blendMode":0,"displayName":"default","isLocked":false,"name":"18c6f7d8-40af-4c65-ac58-5fedad69cae2","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_tiles_cliff",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1fb95ae2-3e3c-4326-bfdf-335de916571d","path":"sprites/spr_tiles_cliff/spr_tiles_cliff.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e987e432-201b-4256-a4c8-cf08a8167259","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7fd4199b-ab02-482a-be59-6ea72b0d5880","path":"sprites/spr_tiles_cliff/spr_tiles_cliff.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"85d90355-8e1b-4e3e-8c00-3ab601a91b71","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

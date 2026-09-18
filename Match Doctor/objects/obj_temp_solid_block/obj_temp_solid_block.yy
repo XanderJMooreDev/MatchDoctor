@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_temp_solid_block",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_temp_solid_block",
   "overriddenProperties":[],
@@ -32,5 +34,5 @@
     "path":"sprites/spr_temp_block/spr_temp_block.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
