@@ -6,7 +6,7 @@ walkSpeed = 4;
 runSpeed = 5;
 
 // Defines all objects you can't pass through
-solids = [ obj_temp_ally ];
+solids = [ obj_temp_ally, obj_temp_solid_block ];
 
 // Variables needed for general block moving
 is_Holding = false;

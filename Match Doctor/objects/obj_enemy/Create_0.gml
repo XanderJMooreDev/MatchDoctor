@@ -14,7 +14,7 @@ path_object = layer_tilemap_get_id("Tiles_Path");
 
 rangeType = "Arrow";
 
-maxHp = 10;
+maxHp = 20;
 hp = maxHp;
 
 maxCooldown = 30;
@@ -65,34 +65,6 @@ pathfind = function() {
 	
 	// Moves in the desired direction
 	y += moveSpeed * multiplier;
-}
-
-shoot_foe = function() {
-	// Ensures you aren't constantly shooting at targets
-	if cooldown <= 0 {
-		cooldown = maxCooldown;
-	}
-	else {
-		cooldown--;
-		return;
-	}
-	
-	// Calls a function from scr_targeting to find the nearest foe
-	nearest_target = find_nearest(targetable_objects, x, y);
-	
-	// At this point, the closest targetable object is set to 
-	// nearestTarget
-	if nearestTarget == noone {
-		return;
-	}
-	
-	if rangeType != "None" {
-		proj = instance_create_layer(x, y, "Characters", obj_projectile,
-		{
-			target : nearestTarget,
-			type: rangeType
-		});
-	}
 }
 
 // This can likely be exactly copied into the ally troops when added

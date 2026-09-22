@@ -66,7 +66,7 @@ if (key_pickup) {
 
         // If it is clear you can place 
         if (!place_meeting(drop_x, drop_y, obj_temp_solid_block)) {
-            instance_create_layer(drop_x, drop_y, "Instances", held_block);
+            instance_create_layer(drop_x, drop_y, "Characters", held_block);
 
             is_Holding = false;
             held_block = noone;

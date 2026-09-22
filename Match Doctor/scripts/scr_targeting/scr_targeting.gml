@@ -37,3 +37,32 @@ function measure_dist(target, currX, currY) {
 	
 	return sqrt(sqr(a) + sqr(b));
 }
+
+// Shoot projectiles at target
+function shoot_foe(targetable_objects) {
+	// Ensures you aren't constantly shooting at targets
+	if cooldown <= 0 {
+		cooldown = maxCooldown;
+	}
+	else {
+		cooldown--;
+		return;
+	}
+	
+	// Calls a function from above to find the nearest foe
+	nearest_target = find_nearest(targetable_objects, x, y);
+	
+	// At this point, the closest targetable object is set to 
+	// nearestTarget
+	if nearestTarget == noone {
+		return;
+	}
+	
+	if rangeType != "None" {
+		proj = instance_create_layer(x, y, "Characters", obj_projectile,
+		{
+			target : nearestTarget,
+			type: rangeType
+		});
+	}
+}
