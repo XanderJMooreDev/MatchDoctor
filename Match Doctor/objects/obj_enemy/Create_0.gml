@@ -24,7 +24,8 @@ cooldown = maxCooldown;
 // non-equal paths, making branching paths pointless. Needs an update
 pathfind = function() {
 	// If standing near the nest, stop moving
-	if place_meeting(x - centralizeOffset - 40, y, obj_nest) {
+	if place_meeting(x - centralizeOffset - 40, y, obj_nest) ||
+	x < 100 {
 		return;
 	}
 	
@@ -72,6 +73,7 @@ take_damage = function(damage) {
 	hp -= damage;
 	
 	if hp <= 0 {
+		instance_create_layer(x, y, "Characters", obj_fallen_enemy);
 		instance_destroy();
 	}
 }
