@@ -35,7 +35,7 @@ read_controls = function() {
 
 move = function() {
 	if velocityX != 0 {
-		image_xscale = inputX * abs(image_xscale);
+		//image_xscale = inputX * abs(image_xscale);
 	}
 	
 	attempt_move(velocityX, velocityY);
@@ -54,5 +54,18 @@ attempt_move = function(moveX, moveY) {
 		if !place_meeting(x, y + moveY, solids[i]) {
 			y += moveY;
 		}
+	}
+}
+
+switch_anims = function() {
+	if(velocityX != 0) { // run left/right
+		sprite_index = spr_player_run_side
+		image_xscale = inputX * abs(image_xscale);
+	} else if(velocityY < 0) { // run up
+		sprite_index = spr_player_run_up
+	} else if(velocityY > 0) { // run down
+		sprite_index = spr_player_run_down
+	} else { // idle
+		sprite_index = spr_player_idle
 	}
 }
