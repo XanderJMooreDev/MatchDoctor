@@ -1,3 +1,3 @@
 read_controls();
 move();
-animate();
+switch_anims();
