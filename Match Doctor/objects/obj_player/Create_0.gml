@@ -5,8 +5,13 @@ velocityY = 0;
 walkSpeed = 4;
 runSpeed = 5;
 
+// Get tile layer ids
+tile_path = layer_tilemap_get_id("tiles_path")
+tile_cliff = layer_tilemap_get_id("tiles_cliff")
+tile_cliff_bottom = layer_tilemap_get_id("tiles_cliff_bottom")
+
 // Defines all objects you can't pass through
-solids = [ obj_temp_ally, obj_temp_solid_block ];
+solids = [ obj_temp_ally, obj_temp_solid_block, tile_cliff ];
 
 // Variables needed for general block moving
 is_Holding = false;
@@ -82,6 +87,14 @@ attempt_move = function(moveX, moveY) {
 	
 	if !wallY {
 		y += moveY;
+	}
+}
+
+check_tile_y = function(checkX, checkY, tile_layer, tile_index) {
+	if(tile_get_index(tilemap_get_at_pixel(tile_layer, checkX, checkY)) == tile_index) { // exclude dirt path
+		return true
+	} else {
+		return false
 	}
 }
 
