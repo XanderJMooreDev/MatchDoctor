@@ -6,7 +6,7 @@ walkSpeed = 4;
 runSpeed = 5;
 
 // Defines all objects you can't pass through
-solids = [ obj_temp_solid_block, obj_temp_ally ];
+solids = [ obj_temp_ally ];
 
 // Variables needed for general block moving
 is_Holding = false;
@@ -75,7 +75,15 @@ attempt_move = function(moveX, moveY) {
 animate = function() {
 	// Selects sprite based on conditions
 	if velocityX != 0 || velocityY != 0 {
-		sprite_index = spr_player_run_side;
+		if velocityX != 0 {
+			sprite_index = spr_player_run_side;
+		}
+		else if velocityY > 0 {
+			sprite_index = spr_player_run_down;
+		}
+		else {
+			sprite_index = spr_player_run_up;
+		}
 	}
 	else {
 		sprite_index = spr_player_idle;

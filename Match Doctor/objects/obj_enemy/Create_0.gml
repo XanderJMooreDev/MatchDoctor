@@ -67,7 +67,7 @@ pathfind = function() {
 	y += moveSpeed * multiplier;
 }
 
-target_foes = function() {
+shoot_foe = function() {
 	// Ensures you aren't constantly shooting at targets
 	if cooldown <= 0 {
 		cooldown = maxCooldown;
@@ -77,32 +77,8 @@ target_foes = function() {
 		return;
 	}
 	
-	// Sets these variables very high so that, when a closer target
-	// is found, it will certainly be closer than the maximum range.
-	// By default, there is no target
-	nearestXDiff = 300;
-	nearestYDiff = 300;
-	nearestTarget = noone;
-	
-	// Loops through each instance of each targetable object, using
-	// two loops, and setting only the closest target to be attacked to
-	// allow only one target
-	for (i = 0; i < array_length(targetable_objects); i++) {
-		for (j = 0; j < instance_number(targetable_objects[i]); j++) {
-			currTarget = instance_find(targetable_objects[i], j);
-			
-			// If you're closer to the current target than the last
-			// closest target, replace the nearest target
-			if nearestTarget == noone {
-				if measure_dist(currTarget) < 300 {
-					nearestTarget = currTarget;
-				}
-			}
-			else if measure_dist(currTarget) < measure_dist(nearestTarget) {
-				nearestTarget = currTarget;
-			}
-		}
-	}
+	// Calls a function from scr_targeting to find the nearest foe
+	nearest_target = find_nearest(targetable_objects, x, y);
 	
 	// At this point, the closest targetable object is set to 
 	// nearestTarget
@@ -117,15 +93,6 @@ target_foes = function() {
 			type: rangeType
 		});
 	}
-}
-
-// Simplifies checking the distane between two points by doing
-// Pythagorean Theorem
-measure_dist = function(target) {
-	a = abs(x - target.x);
-	b = abs(y - target.y);
-	
-	return sqrt(sqr(a) + sqr(b));
 }
 
 // This can likely be exactly copied into the ally troops when added

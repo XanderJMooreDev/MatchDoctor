@@ -1,2 +1,2 @@
 pathfind();
-target_foes();
+shoot_foe();

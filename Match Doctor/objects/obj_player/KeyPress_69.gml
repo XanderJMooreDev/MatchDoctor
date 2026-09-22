@@ -26,7 +26,7 @@ if (key_pickup) {
         is_Holding = false;
 
         // Remake the block at the original position 
-        instance_create_layer(x + 64, y, "Instances", held_block);
+        instance_create_layer(x + 64, y, "Characters", held_block);
         held_block = noone;
 
         show_debug_message("Block placed");
