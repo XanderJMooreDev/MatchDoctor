@@ -11,6 +11,7 @@ solids = [ obj_temp_solid_block ];
 // Variables needed for general block moving
 is_Holding = false;
 held_Block = noone;
+facing = "left";
 
 // Uses keyboard_check to set the directional controls. I'd like to
 // eventually develop a obj_control_manager to allow for controller
@@ -35,6 +36,18 @@ read_controls = function() {
 		velocityX = walkSpeed * inputX;
 		velocityY = walkSpeed * inputY;
 	}
+	
+	// This is to check which direction the player is facing at any given time
+	// mostly to help with block placement. 
+	if (inputX > 0) {
+		facing = "right";
+	} else if (inputX < 0) {
+		facing = "left";
+	} else if (inputY > 0) {
+		facing = "down";
+	} else if (inputY < 0) {
+		facing = "up";
+	}	
 }
 
 move = function() {
