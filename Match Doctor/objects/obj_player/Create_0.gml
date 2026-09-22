@@ -8,6 +8,10 @@ runSpeed = 5;
 // Defines all objects you can't pass through
 solids = [ obj_temp_solid_block, obj_temp_ally ];
 
+// Variables needed for general block moving
+is_Holding = false;
+held_Block = noone;
+
 // Uses keyboard_check to set the directional controls. I'd like to
 // eventually develop a obj_control_manager to allow for controller
 // and keyboard support more easily
