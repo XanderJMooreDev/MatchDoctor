@@ -12,6 +12,7 @@ solids = [ obj_temp_ally, obj_temp_solid_block ];
 is_Holding = false;
 held_Block = noone;
 facing = "left";
+nearest_block = noone;
 
 // Uses keyboard_check to set the directional controls. I'd like to
 // eventually develop a obj_control_manager to allow for controller

@@ -66,8 +66,20 @@ if (key_pickup) {
 
         // If it is clear you can place 
         if (!place_meeting(drop_x, drop_y, obj_temp_solid_block)) {
+			// Checks where the nearest object is to the dropped object, if they are close enough
+			// sends it to be merged. Must be done before object is placed.
+			nearest_block = instance_nearest(drop_x, drop_y, held_block.object_index);
+			if (nearest_block != noone)
+			{
+				// Checks how the actual distance the dropped block is to the nearest block of the same type. 
+				if (point_distance(drop_x, drop_y, nearest_block.x, nearest_block.y) < 96)
+				{
+					merge_objects(held_block, nearest_block);
+				}
+			}
+			
             instance_create_layer(drop_x, drop_y, "Characters", held_block);
-
+		
             is_Holding = false;
             held_block = noone;
 
