@@ -29,6 +29,7 @@ if (key_pickup) {
             is_Holding = true;
             // Get the object's type and store it 
             held_block = block.object_index;
+			show_debug_message(held_block.id);
             // Remove the original object that was there 
             with (block) {
                 instance_destroy();
@@ -73,13 +74,19 @@ if (key_pickup) {
 					// nearest block of the same type. 
 					if (point_distance(drop_x, drop_y, nearest_block.x, nearest_block.y) < 96)
 					{
-						merge_objects(held_block.object_index, nearest_block.object_index);
+						show_debug_message("Held is: ", held_block);
+						show_debug_message(held_block);
+						show_debug_message("Near is: ", nearest_block);		
+						show_debug_message(nearest_block);
+						held_block = merge_objects(held_block, nearest_block);
 					}
 				}
 			}
 			
 			// Creates the object that is stored at the correct layer 
-            instance_create_layer(drop_x, drop_y, "Characters", held_block);
+			if (held_block != noone){
+				instance_create_layer(drop_x, drop_y, "Characters", held_block);
+			}
 			// Setting original values back so they can be used again 
             is_Holding = false;
             held_block = noone;
