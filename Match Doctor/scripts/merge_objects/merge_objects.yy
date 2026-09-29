@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"merge_objects",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"merge_objects",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
