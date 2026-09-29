@@ -23,27 +23,23 @@ if (key_pickup) {
 
     // Picking up the block 
     if (!is_Holding) {
-		// Calls for the parent of the pickups to see if it is one of them 
-        var block = instance_place(check_x, check_y, Pickup_Parent);
-		// Checks if the instance has the "pickup" variable property 
-		if (variable_instance_exists(block, "pickup")){
-			// Checks if the block is even there (Also used for debugging purposes)
-	        if (block != noone) {
-	            is_Holding = true;
-	            // Get the object's type and store it 
-	            held_block = block.object_index;
-				show_debug_message(held_block.id);
-	            // Remove the original object that was there 
-	            with (block) {
-	                instance_destroy();
-	            }
-			// Debugging messages 
-	            /* show_debug_message("Block picked up"); */ 
-	        } /*else {
-	            show_debug_message("No block found");
-	        }*/
-	    }
-	}
+        var block = instance_place(check_x, check_y, obj_temp_solid_block);
+
+        if (block != noone) {
+            is_Holding = true;
+            // Get the object's type and store it 
+            held_block = block.object_index;
+			show_debug_message(held_block.id);
+            // Remove the original object that was there 
+            with (block) {
+                instance_destroy();
+            }
+		// Debugging messages 
+            /* show_debug_message("Block picked up"); */ 
+        } /*else {
+            show_debug_message("No block found");
+        }*/
+    }
     // Dropping the block 
     else {
         var drop_x = x;
@@ -64,9 +60,8 @@ if (key_pickup) {
                 drop_x += 64;
                 break;
         }
-			
         // Checks if the placement of the block is alright for the object  
-        if (!place_meeting(drop_x, drop_y, Pickup_Parent)) {
+        if (!place_meeting(drop_x, drop_y, obj_temp_solid_block)) {
 			// Checks if there are any other instances of the held block before attempting a merge 
 			if (instance_exists(held_block)){
 				// Checks where the nearest object is to the dropped object, if they are close enough
