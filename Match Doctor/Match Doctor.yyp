@@ -31,6 +31,7 @@
   },
   "name":"Match Doctor",
   "resources":[
+    {"id":{"name":"obj_debug_manager","path":"objects/obj_debug_manager/obj_debug_manager.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_fallen_enemy","path":"objects/obj_fallen_enemy/obj_fallen_enemy.yy",},},
     {"id":{"name":"obj_nest","path":"objects/obj_nest/obj_nest.yy",},},
@@ -71,9 +72,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"room_startup","path":"rooms/room_startup/room_startup.yy",},},
     {"roomId":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
     {"roomId":{"name":"room_tiletest","path":"rooms/room_tiletest/room_tiletest.yy",},},
-    {"roomId":{"name":"room_startup","path":"rooms/room_startup/room_startup.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
