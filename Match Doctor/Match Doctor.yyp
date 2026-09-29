@@ -35,6 +35,7 @@
     {"id":{"name":"obj_temp_ally","path":"objects/obj_temp_ally/obj_temp_ally.yy",},},
     {"id":{"name":"obj_temp_path","path":"objects/obj_temp_path/obj_temp_path.yy",},},
     {"id":{"name":"obj_temp_solid_block","path":"objects/obj_temp_solid_block/obj_temp_solid_block.yy",},},
+    {"id":{"name":"Pickup_Parent","path":"objects/Pickup_Parent/Pickup_Parent.yy",},},
     {"id":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
     {"id":{"name":"room_tiletest","path":"rooms/room_tiletest/room_tiletest.yy",},},
     {"id":{"name":"merge_objects","path":"scripts/merge_objects/merge_objects.yy",},},
