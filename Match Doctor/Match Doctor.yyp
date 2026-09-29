@@ -24,7 +24,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"Match Doctor",
   "resources":[
@@ -33,6 +33,7 @@
     {"id":{"name":"obj_nest","path":"objects/obj_nest/obj_nest.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_projectile","path":"objects/obj_projectile/obj_projectile.yy",},},
+    {"id":{"name":"obj_stair","path":"objects/obj_stair/obj_stair.yy",},},
     {"id":{"name":"obj_start","path":"objects/obj_start/obj_start.yy",},},
     {"id":{"name":"obj_temp_ally","path":"objects/obj_temp_ally/obj_temp_ally.yy",},},
     {"id":{"name":"obj_temp_path","path":"objects/obj_temp_path/obj_temp_path.yy",},},
@@ -53,6 +54,7 @@
     {"id":{"name":"spr_temp_enemy","path":"sprites/spr_temp_enemy/spr_temp_enemy.yy",},},
     {"id":{"name":"spr_temp_health","path":"sprites/spr_temp_health/spr_temp_health.yy",},},
     {"id":{"name":"spr_temp_path","path":"sprites/spr_temp_path/spr_temp_path.yy",},},
+    {"id":{"name":"spr_temp_stair","path":"sprites/spr_temp_stair/spr_temp_stair.yy",},},
     {"id":{"name":"spr_tiles_cliff","path":"sprites/spr_tiles_cliff/spr_tiles_cliff.yy",},},
     {"id":{"name":"spr_tiles_grass","path":"sprites/spr_tiles_grass/spr_tiles_grass.yy",},},
     {"id":{"name":"spr_tiles_path","path":"sprites/spr_tiles_path/spr_tiles_path.yy",},},
@@ -63,6 +65,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"room_tiletest","path":"rooms/room_tiletest/room_tiletest.yy",},},
     {"roomId":{"name":"room_tiletest","path":"rooms/room_tiletest/room_tiletest.yy",},},
     {"roomId":{"name":"room_startup","path":"rooms/room_startup/room_startup.yy",},},
     {"roomId":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
