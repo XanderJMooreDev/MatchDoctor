@@ -11,6 +11,7 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Managers","folderPath":"folders/Objects/Managers.yy","name":"Managers","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -30,6 +31,7 @@
   },
   "name":"Match Doctor",
   "resources":[
+    {"id":{"name":"obj_debug_manager","path":"objects/obj_debug_manager/obj_debug_manager.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_fallen_enemy","path":"objects/obj_fallen_enemy/obj_fallen_enemy.yy",},},
     {"id":{"name":"obj_nest","path":"objects/obj_nest/obj_nest.yy",},},
@@ -40,9 +42,12 @@
     {"id":{"name":"obj_temp_ally","path":"objects/obj_temp_ally/obj_temp_ally.yy",},},
     {"id":{"name":"obj_temp_path","path":"objects/obj_temp_path/obj_temp_path.yy",},},
     {"id":{"name":"obj_temp_solid_block","path":"objects/obj_temp_solid_block/obj_temp_solid_block.yy",},},
+    {"id":{"name":"obj_wave_manager","path":"objects/obj_wave_manager/obj_wave_manager.yy",},},
+    {"id":{"name":"Pickup_Parent","path":"objects/Pickup_Parent/Pickup_Parent.yy",},},
     {"id":{"name":"room_startup","path":"rooms/room_startup/room_startup.yy",},},
     {"id":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
     {"id":{"name":"room_tiletest","path":"rooms/room_tiletest/room_tiletest.yy",},},
+    {"id":{"name":"merge_objects","path":"scripts/merge_objects/merge_objects.yy",},},
     {"id":{"name":"scr_targeting","path":"scripts/scr_targeting/scr_targeting.yy",},},
     {"id":{"name":"attack_sfx","path":"sounds/attack_sfx/attack_sfx.yy",},},
     {"id":{"name":"forest_bg","path":"sounds/forest_bg/forest_bg.yy",},},
@@ -67,9 +72,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"room_startup","path":"rooms/room_startup/room_startup.yy",},},
     {"roomId":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
     {"roomId":{"name":"room_tiletest","path":"rooms/room_tiletest/room_tiletest.yy",},},
-    {"roomId":{"name":"room_startup","path":"rooms/room_startup/room_startup.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

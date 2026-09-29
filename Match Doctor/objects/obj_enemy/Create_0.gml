@@ -24,7 +24,8 @@ cooldown = maxCooldown;
 // non-equal paths, making branching paths pointless. Needs an update
 pathfind = function() {
 	// If standing near the nest, stop moving
-	if place_meeting(x - centralizeOffset, y, obj_nest) {
+	if place_meeting(x - centralizeOffset, y, obj_nest) ||
+	x < 100 {
 		return;
 	}
 	
