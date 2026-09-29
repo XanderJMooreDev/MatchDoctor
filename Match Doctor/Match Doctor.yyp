@@ -26,7 +26,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"Match Doctor",
   "resources":[
@@ -67,9 +67,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
     {"roomId":{"name":"room_tiletest","path":"rooms/room_tiletest/room_tiletest.yy",},},
     {"roomId":{"name":"room_startup","path":"rooms/room_startup/room_startup.yy",},},
-    {"roomId":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
