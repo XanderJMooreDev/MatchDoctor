@@ -31,13 +31,16 @@
   "name":"Match Doctor",
   "resources":[
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
+    {"id":{"name":"obj_fallen_enemy","path":"objects/obj_fallen_enemy/obj_fallen_enemy.yy",},},
     {"id":{"name":"obj_nest","path":"objects/obj_nest/obj_nest.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_projectile","path":"objects/obj_projectile/obj_projectile.yy",},},
     {"id":{"name":"obj_stair","path":"objects/obj_stair/obj_stair.yy",},},
+    {"id":{"name":"obj_start","path":"objects/obj_start/obj_start.yy",},},
     {"id":{"name":"obj_temp_ally","path":"objects/obj_temp_ally/obj_temp_ally.yy",},},
     {"id":{"name":"obj_temp_path","path":"objects/obj_temp_path/obj_temp_path.yy",},},
     {"id":{"name":"obj_temp_solid_block","path":"objects/obj_temp_solid_block/obj_temp_solid_block.yy",},},
+    {"id":{"name":"room_startup","path":"rooms/room_startup/room_startup.yy",},},
     {"id":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
     {"id":{"name":"room_tiletest","path":"rooms/room_tiletest/room_tiletest.yy",},},
     {"id":{"name":"scr_targeting","path":"scripts/scr_targeting/scr_targeting.yy",},},
@@ -64,8 +67,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
     {"roomId":{"name":"room_tiletest","path":"rooms/room_tiletest/room_tiletest.yy",},},
+    {"roomId":{"name":"room_startup","path":"rooms/room_startup/room_startup.yy",},},
+    {"roomId":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

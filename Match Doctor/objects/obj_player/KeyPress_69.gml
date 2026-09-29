@@ -25,7 +25,7 @@ if (key_pickup) {
 
     // Picking up the block 
     if (!is_Holding) {
-        var block = instance_place(check_x, check_y, obj_temp_solid_block);
+        var block = instance_place(check_x, check_y, obj_fallen_enemy);
 
         if (block != noone) {
             is_Holding = true;
@@ -65,7 +65,7 @@ if (key_pickup) {
         }
 
         // If it is clear you can place 
-        if (!place_meeting(drop_x, drop_y, obj_temp_solid_block)) {
+        if (!place_meeting(drop_x, drop_y, obj_fallen_enemy)) {
             instance_create_layer(drop_x, drop_y, "Characters", held_block);
 
             is_Holding = false;

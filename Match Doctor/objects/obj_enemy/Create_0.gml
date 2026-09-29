@@ -72,6 +72,7 @@ take_damage = function(damage) {
 	hp -= damage;
 	
 	if hp <= 0 {
+		instance_create_layer(x, y, "Characters", obj_fallen_enemy);
 		instance_destroy();
 	}
 }
