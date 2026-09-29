@@ -1,3 +1,5 @@
+gpu_set_tex_filter(false);
+
 // Sets & creates properties
 velocityX = 0;
 velocityY = 0;
