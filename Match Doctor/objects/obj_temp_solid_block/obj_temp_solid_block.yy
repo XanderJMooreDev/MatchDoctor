@@ -32,6 +32,7 @@
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"pickup","filters":[],"listItems":[],"multiselect":false,"name":"pickup","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"merger","filters":[],"listItems":[],"multiselect":false,"name":"merger","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"will_become","filters":[],"listItems":[],"multiselect":false,"name":"will_become","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_temp_ally","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

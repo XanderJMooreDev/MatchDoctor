@@ -78,10 +78,11 @@ if (key_pickup) {
 					// nearest block of the same type. 
 					if (point_distance(drop_x, drop_y, nearest_block.x, nearest_block.y) < 96)
 					{
-						show_debug_message("Held is: ", held_block);
+						// Debug messages 
+						/* show_debug_message("Held is: ", held_block);
 						show_debug_message(held_block);
 						show_debug_message("Near is: ", nearest_block);		
-						show_debug_message(nearest_block);
+						show_debug_message(nearest_block); */ 
 						held_block = merge_objects(held_block, nearest_block);
 					}
 				}
