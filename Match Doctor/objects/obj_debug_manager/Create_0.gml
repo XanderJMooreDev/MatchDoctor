@@ -6,11 +6,20 @@ check_debug_controls = function() {
 	speedResetControl = keyboard_check_pressed(vk_left) ||
 	keyboard_check_pressed(vk_right);
 	resetControl = keyboard_check_pressed(vk_backspace);
+	volumeControl = keyboard_check_pressed(ord("1"));
 }
 
 check_reset = function() {
 	if resetControl {
 		room = room_startup;
+		instance_destroy(obj_wave_manager);
+		instance_create_layer(0, 0, "Characters", obj_wave_manager);
+	}
+}
+
+check_audio = function() {
+	if volumeControl {
+		audio_stop_all();
 	}
 }
 
