@@ -32,6 +32,7 @@ if (key_pickup) {
 	            is_Holding = true;
 	            // Get the object's type and store it 
 	            held_block = block.object_index;
+				held_type = block.type;
 				show_debug_message(held_block.id);
 	            // Remove the original object that was there 
 	            with (block) {
@@ -90,7 +91,16 @@ if (key_pickup) {
 			
 			// Creates the object that is stored at the correct layer 
 			if (held_block != noone){
-				instance_create_layer(drop_x, drop_y, "Characters", held_block);
+				inst = instance_create_layer(drop_x, drop_y, "Characters", held_block,
+				{
+					type: held_type
+				});
+				
+				// After creating an enemy object, we try to place it alive
+				// as a troop. This is temporary until we add reviving
+				if inst.object_index == obj_fallen_enemy {
+					inst.place();
+				}
 			}
 			// Setting original values back so they can be used again 
             is_Holding = false;

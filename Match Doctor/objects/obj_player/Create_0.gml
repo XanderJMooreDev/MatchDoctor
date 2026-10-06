@@ -4,6 +4,8 @@ gpu_set_tex_filter(false);
 velocityX = 0;
 velocityY = 0;
 
+held_type = "Owl";
+
 walkSpeed = 4;
 runSpeed = 5;
 
@@ -13,7 +15,8 @@ tile_cliff = layer_tilemap_get_id("tiles_cliff")
 tile_cliff_bottom = layer_tilemap_get_id("tiles_cliff_bottom")
 
 // Defines all objects you can't pass through
-solids = [ obj_temp_ally, obj_temp_solid_block, tile_cliff ];
+solids = [ obj_temp_ally, obj_temp_solid_block, tile_cliff,
+obj_nest ];
 
 // Variables needed for general block moving
 is_Holding = false;
