@@ -5,6 +5,13 @@ check_debug_controls = function() {
 	speedDownControl = keyboard_check_pressed(vk_down);
 	speedResetControl = keyboard_check_pressed(vk_left) ||
 	keyboard_check_pressed(vk_right);
+	resetControl = keyboard_check_pressed(vk_backspace);
+}
+
+check_reset = function() {
+	if resetControl {
+		room = room_startup;
+	}
 }
 
 check_speedup = function() {

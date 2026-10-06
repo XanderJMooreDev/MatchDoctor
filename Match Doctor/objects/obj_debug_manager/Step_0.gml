@@ -7,4 +7,5 @@ if !debug {
 }
 
 check_debug_controls();
+check_reset();
 check_speedup();
