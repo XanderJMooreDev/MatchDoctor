@@ -1,1 +1,1 @@
-audio_play_sound(forest_bg, 10, true);
+audio_play_sound(ice_bg, 10, true);
