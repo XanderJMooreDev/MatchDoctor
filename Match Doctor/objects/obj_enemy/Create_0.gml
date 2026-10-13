@@ -9,7 +9,10 @@ targetable_objects = [ obj_temp_ally, obj_nest ];
 
 path_object = layer_tilemap_get_id("Tiles_Path");
 
-rangeType = "Arrow";
+status = "None";
+status_cooldown = 0;
+status_max_cooldown = 0;
+status_duration = 0;
 
 create_by_type = function() {
 	stats = EnemyStats(type);
@@ -18,6 +21,7 @@ create_by_type = function() {
 	sprite_index = stats.sprite;
 	moveSpeed = stats.moveSpeed;
 	maxCooldown = stats.maxCooldown;
+	rangeType = stats.rangeType;
 }
 
 // Assigns base stats in scr_enemy_type_stats based on the type assigned

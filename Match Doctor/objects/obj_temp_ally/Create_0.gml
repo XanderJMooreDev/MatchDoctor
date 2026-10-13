@@ -1,4 +1,7 @@
-rangeType = "Arrow";
+status = "None";
+status_cooldown = 0;
+status_max_cooldown = 0;
+status_duration = 0;
 
 // Copied essentially from obj_enemy but without unused parameters
 create_by_type = function() {
@@ -7,6 +10,7 @@ create_by_type = function() {
 	sprite_index = stats.sprite;
 	maxHp = stats.maxHp;
 	maxCooldown = stats.maxCooldown;
+	rangeType = stats.rangeType;
 }
 
 create_by_type();

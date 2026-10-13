@@ -24,6 +24,7 @@ fly_at_target = function() {
 	
 	// Has hit target, deals damage
 	if abs(xDiff) <= moveSpeed && abs(yDiff) <= moveSpeed {
+		status_applied(self, target);
 		target.take_damage(damage);
 		instance_destroy();
 	}

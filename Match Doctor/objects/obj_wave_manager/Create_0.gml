@@ -9,7 +9,7 @@ spawn_cooldown = 0;
 max_spawn_cooldown = 30;
 
 woods_wave = [
-	[ "Owl", "Owl", "Owl" ],
+	[ "Cardinal", "Cardinal", "Cardinal" ],
 	[ "Owl", "Bluebird" ],
 	[ "Owl", "Owl", "Bluebird", "Bluebird" ]
 ];
