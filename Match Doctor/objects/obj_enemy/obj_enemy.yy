@@ -27,14 +27,19 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"type","filters":[],"listItems":[],"multiselect":false,"name":"type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Owl","varType":2,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
+    "name":"spr_enemy1_fly",
+    "path":"sprites/spr_enemy1_fly/spr_enemy1_fly.yy",
+  },
+  "spriteMaskId":{
     "name":"spr_temp_enemy",
     "path":"sprites/spr_temp_enemy/spr_temp_enemy.yy",
   },
-  "spriteMaskId":null,
   "visible":true,
 }

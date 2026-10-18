@@ -1,3 +1,6 @@
+// play attack sound, can make check  for type later
+audio_play_sound(attack_sfx, 5, false);
+
 moveSpeed = 5;
 damage = 3;
 
@@ -21,6 +24,7 @@ fly_at_target = function() {
 	
 	// Has hit target, deals damage
 	if abs(xDiff) <= moveSpeed && abs(yDiff) <= moveSpeed {
+		status_applied(self, target);
 		target.take_damage(damage);
 		instance_destroy();
 	}

@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_temp_path",
-    "path":"sprites/spr_temp_path/spr_temp_path.yy",
+    "name":"spr_objects_nest",
+    "path":"sprites/spr_objects_nest/spr_objects_nest.yy",
   },
   "spriteMaskId":null,
   "visible":true,
