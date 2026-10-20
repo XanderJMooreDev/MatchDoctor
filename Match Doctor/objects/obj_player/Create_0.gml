@@ -16,7 +16,7 @@ tile_cliff_bottom = layer_tilemap_get_id("tiles_cliff_bottom")
 
 // Defines all objects you can't pass through
 solids = [ obj_temp_ally, obj_temp_solid_block, tile_cliff,
-obj_nest ];
+obj_nest, obj_tree1, obj_tree2];
 
 // Variables needed for general block moving
 is_Holding = false;
