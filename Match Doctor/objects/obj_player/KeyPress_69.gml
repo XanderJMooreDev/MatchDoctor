@@ -30,9 +30,13 @@ if (key_pickup) {
 			// Checks if the block is even there (Also used for debugging purposes)
 	        if (block != noone) {
 	            is_Holding = true;
+				if (!instance_exists(drop_marker)) {
+				    drop_marker_id = instance_create_layer(x, y, "Characters", drop_marker);
+				}
 	            // Get the object's type and store it 
 	            held_block = block.object_index;
 				held_type = block.type;
+				held_stage = block.stage;
 				show_debug_message(held_block.id);
 	            // Remove the original object that was there 
 	            with (block) {
@@ -53,16 +57,16 @@ if (key_pickup) {
 		// be correct for placing the block. 
         switch (facing) {
             case "up":
-                drop_y -= 64;
+                drop_y -= 74;
                 break;
             case "down":
-                drop_y += 64;
+                drop_y += 74;
                 break;
             case "left":
-                drop_x -= 64;
+                drop_x -= 74;
                 break;
             case "right":
-                drop_x += 64;
+                drop_x += 74;
                 break;
         }
         // Checks if the placement of the block is alright for the object  
@@ -83,8 +87,14 @@ if (key_pickup) {
 						/* show_debug_message("Held is: ", held_block);
 						show_debug_message(held_block);
 						show_debug_message("Near is: ", nearest_block);		
-						show_debug_message(nearest_block); */ 
+						show_debug_message(nearest_block); */
+						temp_block = held_block;
 						held_block = merge_objects(held_block, nearest_block);
+						show_debug_message(temp_block);
+						show_debug_message(held_block);
+						if (temp_block != held_block) {
+							held_stage++;
+						}
 					}
 				}
 			}
@@ -93,7 +103,8 @@ if (key_pickup) {
 			if (held_block != noone){
 				inst = instance_create_layer(drop_x, drop_y, "Characters", held_block,
 				{
-					type: held_type
+					type: held_type,
+					stage: held_stage
 				});
 				
 				// After creating an enemy object, we try to place it alive
@@ -101,6 +112,9 @@ if (key_pickup) {
 				if inst.object_index == obj_fallen_enemy {
 					inst.place();
 				}
+			}
+			if (instance_exists(drop_marker)){
+				instance_destroy(drop_marker);
 			}
 			// Setting original values back so they can be used again 
             is_Holding = false;

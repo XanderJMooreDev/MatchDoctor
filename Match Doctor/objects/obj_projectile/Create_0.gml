@@ -7,6 +7,22 @@ damage = 3;
 image_xscale = .5;
 image_yscale = .5;
 
+rotateable = true;
+
+apply_sprite = function() {
+	switch type {
+		case "Arrow":
+			return spr_proj_arrow;
+		case "Burn":
+		rotateable = false;
+			return spr_proj_fire;
+		default:
+			return spr_proj_arrow;
+	}
+}
+
+sprite_index = apply_sprite();
+
 fly_at_target = function() {
 	// Checks appropriate distance to the target and points
 	// the sprite. The catch statement deletes the arrow if the target
@@ -15,7 +31,12 @@ fly_at_target = function() {
 		xDiff = target.x - x;
 		yDiff = target.y - y;
 		
-		image_angle = point_direction(x, y, target.x, target.y);
+		if rotateable {
+			image_angle = point_direction(x, y, target.x, target.y);
+		}
+		else {
+			image_angle = 0;
+		}
 	}
 	catch (ex) {
 		instance_destroy();
@@ -24,6 +45,7 @@ fly_at_target = function() {
 	
 	// Has hit target, deals damage
 	if abs(xDiff) <= moveSpeed && abs(yDiff) <= moveSpeed {
+		status_applied(self, target);
 		target.take_damage(damage);
 		instance_destroy();
 	}
