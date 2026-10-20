@@ -3,7 +3,6 @@ function EnemyType(_name, _stage, _sprite, _deadSprite, _maxHp, _maxCooldown, _m
 	name = _name;
 	stage = _stage;
 	sprite = _sprite;
-	deadSprite = _deadSprite;
 	maxHp = _maxHp;
 	maxCooldown = _maxCooldown;
 	moveSpeed = _moveSpeed;
