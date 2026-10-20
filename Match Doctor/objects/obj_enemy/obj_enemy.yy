@@ -29,13 +29,15 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"type","filters":[],"listItems":[],"multiselect":false,"name":"type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Owl","varType":2,},
+    {"$GMObjectProperty":"v2","%Name":"stage","filters":[],"listItems":[],"multiselect":false,"name":"stage","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"sprite","filters":[],"listItems":[],"multiselect":false,"name":"sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_enemy1_fly","path":"sprites/spr_enemy1_fly/spr_enemy1_fly.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_enemy1_fly","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_temp_enemy",
-    "path":"sprites/spr_temp_enemy/spr_temp_enemy.yy",
+    "name":"spr_enemy1_fly",
+    "path":"sprites/spr_enemy1_fly/spr_enemy1_fly.yy",
   },
   "spriteMaskId":{
     "name":"spr_temp_enemy",

@@ -9,7 +9,7 @@ spawn_cooldown = 0;
 max_spawn_cooldown = 30;
 
 woods_wave = [
-	[ "Owl", "Owl", "Owl" ],
+	[ "Cardinal", "Cardinal", "Cardinal" ],
 	[ "Owl", "Bluebird" ],
 	[ "Owl", "Owl", "Bluebird", "Bluebird" ]
 ];
@@ -28,6 +28,7 @@ spawn_wave = function() {
 	instance_create_layer(1440, 416, "Characters", obj_enemy,
 	{
 		type: enemies_by_wave[area][wave][n],
+		stage: 0,
 		image_xscale: 2,
 		image_yscale: 2
 	});
