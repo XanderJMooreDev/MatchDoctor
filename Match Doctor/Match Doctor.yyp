@@ -33,7 +33,6 @@
   },
   "name":"Match Doctor",
   "resources":[
-    {"id":{"name":"drop_marker","path":"objects/drop_marker/drop_marker.yy",},},
     {"id":{"name":"obj_debug_manager","path":"objects/obj_debug_manager/obj_debug_manager.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_fallen_enemy","path":"objects/obj_fallen_enemy/obj_fallen_enemy.yy",},},
@@ -57,7 +56,6 @@
     {"id":{"name":"attack_sfx","path":"sounds/attack_sfx/attack_sfx.yy",},},
     {"id":{"name":"forest_bg","path":"sounds/forest_bg/forest_bg.yy",},},
     {"id":{"name":"ice_bg","path":"sounds/ice_bg/ice_bg.yy",},},
-    {"id":{"name":"drop_marker_sprite","path":"sprites/drop_marker_sprite/drop_marker_sprite.yy",},},
     {"id":{"name":"spr_effect_death","path":"sprites/spr_effect_death/spr_effect_death.yy",},},
     {"id":{"name":"spr_enemy1_dead","path":"sprites/spr_enemy1_dead/spr_enemy1_dead.yy",},},
     {"id":{"name":"spr_enemy1_fly","path":"sprites/spr_enemy1_fly/spr_enemy1_fly.yy",},},
