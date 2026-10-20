@@ -1,5 +1,5 @@
 image_xscale = -2;
-image_yscale = -2;
+image_yscale = 2;
 
 // We call this to spawn an ally if placed down off of the path.
 // Small detail but we only need to save the type, rather than updating
@@ -11,7 +11,8 @@ place = function() {
 	
 	instance_create_layer(x, y, "Characters", obj_temp_ally,
 	{
-		type: self.type
+		type: self.type,
+		stage: self.stage
 	});
 	
 	instance_destroy();

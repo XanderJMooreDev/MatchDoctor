@@ -15,10 +15,11 @@ status_max_cooldown = 0;
 status_duration = 0;
 
 create_by_type = function() {
-	stats = EnemyStats(type);
+	stats = EnemyStats(type, stage);
 	
 	maxHp = stats.maxHp;
-	sprite_index = stats.sprite;
+	sprite = stats.sprite;
+	deadSprite = stats.deadSprite;
 	moveSpeed = stats.moveSpeed;
 	maxCooldown = stats.maxCooldown;
 	rangeType = stats.rangeType;
@@ -48,6 +49,7 @@ pathfind = function() {
 		x -= moveSpeed;
 		
 		// Stops code if the condition is met
+		show_debug_message("Dead end");
 		return;
 	}
 	
@@ -87,7 +89,8 @@ take_damage = function(damage) {
 		instance_create_layer(x, y, "Characters", obj_fallen_enemy,
 		{
 			type: self.type,
-			sprite_index: self.sprite_index
+			stage: self.stage,
+			sprite_index: self.deadSprite
 		});
 		
 		instance_destroy();

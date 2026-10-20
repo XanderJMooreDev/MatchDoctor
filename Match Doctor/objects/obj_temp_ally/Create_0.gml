@@ -1,3 +1,8 @@
+image_xscale = 2;
+image_yscale = 2;
+
+show_debug_message(stage);
+
 status = "None";
 status_cooldown = 0;
 status_max_cooldown = 0;
@@ -5,7 +10,7 @@ status_duration = 0;
 
 // Copied essentially from obj_enemy but without unused parameters
 create_by_type = function() {
-	stats = EnemyStats(type);
+	stats = EnemyStats(type, stage);
 	
 	sprite_index = stats.sprite;
 	maxHp = stats.maxHp;

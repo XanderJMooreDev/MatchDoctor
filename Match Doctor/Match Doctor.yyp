@@ -67,6 +67,7 @@
     {"id":{"name":"spr_player_run_side","path":"sprites/spr_player_run_side/spr_player_run_side.yy",},},
     {"id":{"name":"spr_player_run_up","path":"sprites/spr_player_run_up/spr_player_run_up.yy",},},
     {"id":{"name":"spr_proj_arrow","path":"sprites/spr_proj_arrow/spr_proj_arrow.yy",},},
+    {"id":{"name":"spr_proj_fire","path":"sprites/spr_proj_fire/spr_proj_fire.yy",},},
     {"id":{"name":"spr_temp_block","path":"sprites/spr_temp_block/spr_temp_block.yy",},},
     {"id":{"name":"spr_temp_enemy_1","path":"sprites/spr_temp_enemy_1/spr_temp_enemy_1.yy",},},
     {"id":{"name":"spr_temp_enemy_2","path":"sprites/spr_temp_enemy_2/spr_temp_enemy_2.yy",},},
@@ -83,8 +84,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
     {"roomId":{"name":"room_startup","path":"rooms/room_startup/room_startup.yy",},},
+    {"roomId":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
     {"roomId":{"name":"room_tiletest","path":"rooms/room_tiletest/room_tiletest.yy",},},
   ],
   "templateType":"game",
