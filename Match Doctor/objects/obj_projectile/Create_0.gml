@@ -1,3 +1,6 @@
+// play attack sound, can make check  for type later
+audio_play_sound(attack_sfx, 5, false);
+
 moveSpeed = 5;
 damage = 3;
 
