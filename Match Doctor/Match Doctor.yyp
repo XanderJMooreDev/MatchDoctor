@@ -59,6 +59,7 @@
     {"id":{"name":"spr_effect_death","path":"sprites/spr_effect_death/spr_effect_death.yy",},},
     {"id":{"name":"spr_enemy1_dead","path":"sprites/spr_enemy1_dead/spr_enemy1_dead.yy",},},
     {"id":{"name":"spr_enemy1_fly","path":"sprites/spr_enemy1_fly/spr_enemy1_fly.yy",},},
+    {"id":{"name":"spr_enemy2_fly","path":"sprites/spr_enemy2_fly/spr_enemy2_fly.yy",},},
     {"id":{"name":"spr_objects_nest","path":"sprites/spr_objects_nest/spr_objects_nest.yy",},},
     {"id":{"name":"spr_player_dance","path":"sprites/spr_player_dance/spr_player_dance.yy",},},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},},
