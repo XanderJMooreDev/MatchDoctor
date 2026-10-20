@@ -34,9 +34,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
+    "name":"spr_enemy1_fly",
+    "path":"sprites/spr_enemy1_fly/spr_enemy1_fly.yy",
+  },
+  "spriteMaskId":{
     "name":"spr_temp_enemy",
     "path":"sprites/spr_temp_enemy/spr_temp_enemy.yy",
   },
-  "spriteMaskId":null,
   "visible":true,
 }

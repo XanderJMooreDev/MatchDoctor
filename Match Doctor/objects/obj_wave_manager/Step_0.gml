@@ -3,3 +3,4 @@ if room == room_startup {
 }
 
 spawn_wave();
+check_wave_dead();

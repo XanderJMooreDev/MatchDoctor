@@ -1,10 +1,22 @@
-maxHp = 12;
+status = "None";
+status_cooldown = 0;
+status_max_cooldown = 0;
+status_duration = 0;
+
+// Copied essentially from obj_enemy but without unused parameters
+create_by_type = function() {
+	stats = EnemyStats(type);
+	
+	sprite_index = stats.sprite;
+	maxHp = stats.maxHp;
+	maxCooldown = stats.maxCooldown;
+	rangeType = stats.rangeType;
+}
+
+create_by_type();
+
 hp = maxHp;
-
-maxCooldown = 30;
 cooldown = maxCooldown;
-
-rangeType = "Arrow";
 
 targetable_objects = [ obj_enemy ];
 

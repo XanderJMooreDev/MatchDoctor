@@ -4,20 +4,30 @@ image_xscale *= -1;
 // Specific hitbox offset to line up
 centralizeOffset = 60;
 
-// Higher the speed, the faster the bird moves through the path
-moveSpeed = 2;
-
 // Any type of object that can be attacked by enemies
 targetable_objects = [ obj_temp_ally, obj_nest ];
 
 path_object = layer_tilemap_get_id("Tiles_Path");
 
-rangeType = "Arrow";
+status = "None";
+status_cooldown = 0;
+status_max_cooldown = 0;
+status_duration = 0;
 
-maxHp = 20;
+create_by_type = function() {
+	stats = EnemyStats(type);
+	
+	maxHp = stats.maxHp;
+	sprite_index = stats.sprite;
+	moveSpeed = stats.moveSpeed;
+	maxCooldown = stats.maxCooldown;
+	rangeType = stats.rangeType;
+}
+
+// Assigns base stats in scr_enemy_type_stats based on the type assigned
+// in the obj_wave_manager
+create_by_type();
 hp = maxHp;
-
-maxCooldown = 30;
 cooldown = maxCooldown;
 
 // This pathfinding doesn't yet allow for randomly selecting between
@@ -68,12 +78,18 @@ pathfind = function() {
 	y += moveSpeed * multiplier;
 }
 
-// This can likely be exactly copied into the ally troops when added
 take_damage = function(damage) {
 	hp -= damage;
 	
 	if hp <= 0 {
-		instance_create_layer(x, y, "Characters", obj_fallen_enemy);
+		global.living_enemies--;
+		
+		instance_create_layer(x, y, "Characters", obj_fallen_enemy,
+		{
+			type: self.type,
+			sprite_index: self.sprite_index
+		});
+		
 		instance_destroy();
 	}
 }

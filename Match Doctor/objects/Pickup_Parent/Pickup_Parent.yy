@@ -6,8 +6,8 @@
   "name":"Pickup_Parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "parentObjectId":null,
   "persistent":false,

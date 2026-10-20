@@ -31,6 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":null,
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_temp_enemy",
+    "path":"sprites/spr_temp_enemy/spr_temp_enemy.yy",
+  },
   "visible":true,
 }
