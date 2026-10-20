@@ -15,11 +15,11 @@
     {"name":"inst_6DD1F23B","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_7F7265BC","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_7E0E7569","path":"rooms/room_test/room_test.yy",},
-    {"name":"inst_33C219A5","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_7C7DD61","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_33C219A5","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_126B6FBE","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_17EBA979","path":"rooms/room_test/room_test.yy",},
+    {"name":"inst_33C219A5","path":"rooms/room_test/room_test.yy",},
   ],
   "isDnd":false,
   "layers":[

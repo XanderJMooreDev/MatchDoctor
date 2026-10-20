@@ -30,6 +30,9 @@ if (key_pickup) {
 			// Checks if the block is even there (Also used for debugging purposes)
 	        if (block != noone) {
 	            is_Holding = true;
+				if (!instance_exists(drop_marker)) {
+				    drop_marker_id = instance_create_layer(x, y, "Characters", drop_marker);
+				}
 	            // Get the object's type and store it 
 	            held_block = block.object_index;
 				held_type = block.type;
@@ -101,6 +104,9 @@ if (key_pickup) {
 				if inst.object_index == obj_fallen_enemy {
 					inst.place();
 				}
+			}
+			if (instance_exists(drop_marker)){
+				instance_destroy(drop_marker);
 			}
 			// Setting original values back so they can be used again 
             is_Holding = false;
