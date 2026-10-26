@@ -1,1 +1,1 @@
-room = room_test;
+room = obj_wave_manager.rooms_by_area[0];

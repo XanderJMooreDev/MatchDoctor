@@ -1,12 +1,18 @@
 area = 0;
 wave = 0;
 
+fireworks = 0;
+rainbow = [ c_red, c_orange, c_yellow, c_green,
+c_blue, c_purple ];
+
 global.living_enemies = 0;
 
 n = 0;
 
-spawn_cooldown = 0;
+spawn_cooldown = 300;
 max_spawn_cooldown = 30;
+
+rooms_by_area = [ room_woods, room_ice ];
 
 woods_wave = [
 	[ "Cardinal", "Cardinal", "Cardinal" ],
@@ -14,7 +20,13 @@ woods_wave = [
 	[ "Owl", "Owl", "Bluebird", "Bluebird" ]
 ];
 
-enemies_by_wave = [ woods_wave ];
+ice_wave = [
+	[ "Cardinal", "Cardinal", "Cardinal" ],
+	[ "Owl", "Bluebird" ],
+	[ "Owl", "Owl", "Bluebird", "Bluebird" ]
+];
+
+enemies_by_wave = [ woods_wave, ice_wave ];
 
 spawn_wave = function() {	
 	spawn_cooldown--;
@@ -42,5 +54,9 @@ check_wave_dead = function() {
 	wave + 1 < array_length(enemies_by_wave[area]) {
 		n = 0;
 		wave++;
+	}
+	else if global.living_enemies <= 0
+	&& n != 0 && fireworks == 0 {
+		alarm[0] = 1;
 	}
 }

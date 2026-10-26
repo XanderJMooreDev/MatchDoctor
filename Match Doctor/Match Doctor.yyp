@@ -56,10 +56,11 @@
     {"id":{"name":"obj_tree2","path":"objects/obj_tree2/obj_tree2.yy",},},
     {"id":{"name":"obj_wave_manager","path":"objects/obj_wave_manager/obj_wave_manager.yy",},},
     {"id":{"name":"Pickup_Parent","path":"objects/Pickup_Parent/Pickup_Parent.yy",},},
+    {"id":{"name":"room_ice","path":"rooms/room_ice/room_ice.yy",},},
     {"id":{"name":"room_startup","path":"rooms/room_startup/room_startup.yy",},},
-    {"id":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
     {"id":{"name":"room_tiletest_forest","path":"rooms/room_tiletest_forest/room_tiletest_forest.yy",},},
     {"id":{"name":"room_tiletest_ice","path":"rooms/room_tiletest_ice/room_tiletest_ice.yy",},},
+    {"id":{"name":"room_woods","path":"rooms/room_woods/room_woods.yy",},},
     {"id":{"name":"merge_objects","path":"scripts/merge_objects/merge_objects.yy",},},
     {"id":{"name":"scr_enemy_type_stats","path":"scripts/scr_enemy_type_stats/scr_enemy_type_stats.yy",},},
     {"id":{"name":"scr_status","path":"scripts/scr_status/scr_status.yy",},},
@@ -107,11 +108,11 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
+    {"roomId":{"name":"room_startup","path":"rooms/room_startup/room_startup.yy",},},
+    {"roomId":{"name":"room_woods","path":"rooms/room_woods/room_woods.yy",},},
     {"roomId":{"name":"room_tiletest_forest","path":"rooms/room_tiletest_forest/room_tiletest_forest.yy",},},
     {"roomId":{"name":"room_tiletest_ice","path":"rooms/room_tiletest_ice/room_tiletest_ice.yy",},},
-    {"roomId":{"name":"room_startup","path":"rooms/room_startup/room_startup.yy",},},
-
+    {"roomId":{"name":"room_ice","path":"rooms/room_ice/room_ice.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
