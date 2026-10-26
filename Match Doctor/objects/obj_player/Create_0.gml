@@ -6,6 +6,9 @@ held_block = noone;
 velocityX = 0;
 velocityY = 0;
 
+marker_x = 0;
+marker_y = 0;
+
 held_type = "Owl";
 
 walkSpeed = 4;
