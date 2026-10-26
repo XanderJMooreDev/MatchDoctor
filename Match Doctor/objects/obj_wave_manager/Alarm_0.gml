@@ -12,9 +12,5 @@ if fireworks < 6 {
 }
 else {
 	fireworks = 0;
-	wave = 0;
-	n = 0;
-	area++;
-	room = rooms_by_area[area];
-	show_debug_message("Move room");
+	next_area();
 }

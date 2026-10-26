@@ -21,7 +21,7 @@ woods_wave = [
 ];
 
 ice_wave = [
-	[ "Cardinal", "Cardinal", "Cardinal" ],
+	[ "Cardinal", "Bluebird", "Bluebird" ],
 	[ "Owl", "Bluebird" ],
 	[ "Owl", "Owl", "Bluebird", "Bluebird" ]
 ];
@@ -59,4 +59,11 @@ check_wave_dead = function() {
 	&& n != 0 && fireworks == 0 {
 		alarm[0] = 1;
 	}
+}
+
+next_area = function() {
+	wave = 0;
+	n = 0;
+	area++;
+	room = rooms_by_area[area];
 }

@@ -37,6 +37,12 @@ if (key_pickup) {
 	            held_block = block.object_index;
 				held_type = block.type;
 				held_stage = block.stage;
+				held_sprite = block.sprite_index;
+				
+				if variable_instance_exists(block, "hp") {
+					held_hp = block.hp;
+				}
+				
 				show_debug_message(held_block.id);
 	            // Remove the original object that was there 
 	            with (block) {
@@ -111,6 +117,9 @@ if (key_pickup) {
 				// as a troop. This is temporary until we add reviving
 				if inst.object_index == obj_fallen_enemy {
 					inst.place();
+				}
+				else {
+					inst.hp = held_hp;
 				}
 			}
 			if (instance_exists(drop_marker)){
