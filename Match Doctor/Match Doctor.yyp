@@ -30,7 +30,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"Match Doctor",
   "resources":[
@@ -93,6 +93,8 @@
     {"id":{"name":"spr_player_run_up","path":"sprites/spr_player_run_up/spr_player_run_up.yy",},},
     {"id":{"name":"spr_proj_arrow","path":"sprites/spr_proj_arrow/spr_proj_arrow.yy",},},
     {"id":{"name":"spr_proj_fire","path":"sprites/spr_proj_fire/spr_proj_fire.yy",},},
+    {"id":{"name":"spr_proj_freeze","path":"sprites/spr_proj_freeze/spr_proj_freeze.yy",},},
+    {"id":{"name":"spr_proj_shock","path":"sprites/spr_proj_shock/spr_proj_shock.yy",},},
     {"id":{"name":"spr_temp_block","path":"sprites/spr_temp_block/spr_temp_block.yy",},},
     {"id":{"name":"spr_temp_enemy_1","path":"sprites/spr_temp_enemy_1/spr_temp_enemy_1.yy",},},
     {"id":{"name":"spr_temp_enemy_2","path":"sprites/spr_temp_enemy_2/spr_temp_enemy_2.yy",},},

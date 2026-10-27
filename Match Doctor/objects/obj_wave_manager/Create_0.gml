@@ -15,9 +15,9 @@ max_spawn_cooldown = 30;
 rooms_by_area = [ room_woods, room_ice ];
 
 woods_wave = [
-	[ "Cardinal", "Cardinal", "Cardinal" ],
+	[ "Finch", "Cardinal", "Cardinal" ],
 	[ "Owl", "Bluebird" ],
-	[ "Owl", "Owl", "Bluebird", "Bluebird" ]
+	[ "Finch", "Owl", "Bluebird", "Bluebird" ]
 ];
 
 ice_wave = [

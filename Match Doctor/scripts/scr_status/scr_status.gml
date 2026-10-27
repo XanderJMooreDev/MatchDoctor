@@ -10,9 +10,11 @@ function status_applied(projectile, defender) {
 	
 	switch projectile.type {
 		case "Freeze":
+			effect_create_layer("Effects", ef_star, x, y, 2, c_teal);
+			defender.status = "Freeze";
+			defender.status_duration = 300;
+			
 			if (defender.object_index == obj_enemy) {
-				defender.status = "Freeze";
-				defender.status_duration = 300;
 				defender.moveSpeed /= .5;
 			}
 			else if (defender.object_index == obj_temp_ally) {
@@ -25,6 +27,15 @@ function status_applied(projectile, defender) {
 			defender.status_duration = 300;
 			defender.status_cooldown = 0;
 			defender.status_max_cooldown = 60;
+			
+			return;
+		case "Shock":
+			effect_create_layer("Effects", ef_star, x, y, 2, c_yellow);
+			if (defender.object_index == obj_enemy) {
+				defender.status = "Shock";
+				defender.status_duration = 300;
+			}
+			
 			return;
 	}
 }
