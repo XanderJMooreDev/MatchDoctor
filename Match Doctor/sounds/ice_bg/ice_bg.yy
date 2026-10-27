@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"ice_bg",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Background Music",
+    "path":"folders/Sounds/Background Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

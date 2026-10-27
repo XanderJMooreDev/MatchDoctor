@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"attack_sfx",
+  "%Name":"music_sfx",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,15 +12,15 @@
   "conversionMode":0,
   "duration":1.996916,
   "exportDir":"",
-  "name":"attack_sfx",
+  "name":"music_sfx",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Sound Effects",
+    "path":"folders/Sounds/Sound Effects.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"attack_sfx.wav",
-  "volume":1.0,
+  "soundFile":"music_sfx.wav",
+  "volume":0.1,
 }
