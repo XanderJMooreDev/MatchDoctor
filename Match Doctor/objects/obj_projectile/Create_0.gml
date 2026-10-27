@@ -13,6 +13,10 @@ apply_sprite = function() {
 	switch type {
 		case "Arrow":
 			return spr_proj_arrow;
+		case "Shock":
+			return spr_proj_shock;
+		case "Freeze":
+			return spr_proj_freeze;
 		case "Burn":
 		rotateable = false;
 			return spr_proj_fire;

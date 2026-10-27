@@ -15,8 +15,9 @@ function EnemyStats(name, stage) {
 	enemy_types = [
 		new EnemyType("Owl", 0, spr_enemy1_fly, spr_enemy1_dead, 50, 30, 2, "Arrow"),
 		new EnemyType("Owl", 1, spr_enemy2_fly, spr_enemy1_dead, 150, 10, 2, "Arrow"),
-		new EnemyType("Bluebird", 0, spr_temp_enemy_1, spr_enemy1_dead, 60, 40, 1.5, "Arrow"),
-		new EnemyType("Cardinal", 0, spr_temp_enemy_2, spr_enemy1_dead, 65, 30, 2, "Burn")
+		new EnemyType("Bluebird", 0, spr_enemy5_fly, spr_enemy1_dead, 60, 40, 1.5, "Freeze"),
+		new EnemyType("Cardinal", 0, spr_enemy3_fly, spr_enemy1_dead, 65, 30, 2, "Burn"),
+		new EnemyType("Finch", 0, spr_enemy6_fly, spr_enemy1_dead, 42, 20, 2.5, "Shock")
 	];
 	
 	for (i = 0; i < array_length(enemy_types); i++) {

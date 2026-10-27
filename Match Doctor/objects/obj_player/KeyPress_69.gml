@@ -30,13 +30,24 @@ if (key_pickup) {
 			// Checks if the block is even there (Also used for debugging purposes)
 	        if (block != noone) {
 	            is_Holding = true;
-				if (!instance_exists(drop_marker)) {
-				    drop_marker_id = instance_create_layer(x, y, "Characters", drop_marker);
-				}
 	            // Get the object's type and store it 
 	            held_block = block.object_index;
 				held_type = block.type;
 				held_stage = block.stage;
+				held_sprite = block.sprite_index;
+				if (!instance_exists(drop_marker)) {
+				    drop_marker_id = instance_create_layer(x, y, "Characters", drop_marker, {
+						sprite_index: held_sprite,
+						image_alpha: .75,
+						image_xscale: 2,
+						image_yscale: 2
+					});
+				}
+				
+				if variable_instance_exists(block, "hp") {
+					held_hp = block.hp;
+				}
+				
 				show_debug_message(held_block.id);
 	            // Remove the original object that was there 
 	            with (block) {
@@ -55,20 +66,23 @@ if (key_pickup) {
         var drop_y = y;
 		// Finds which way the player is facing then makes the x or y 
 		// be correct for placing the block. 
-        switch (facing) {
-            case "up":
-                drop_y -= 74;
-                break;
-            case "down":
-                drop_y += 74;
-                break;
-            case "left":
-                drop_x -= 74;
-                break;
-            case "right":
-                drop_x += 74;
-                break;
-        }
+        //switch (facing) {
+        //    case "up":
+        //        drop_y -= 74;
+        //        break;
+        //    case "down":
+        //        drop_y += 74;
+        //        break;
+        //    case "left":
+        //        drop_x -= 74;
+        //        break;
+        //    case "right":
+        //        drop_x += 74;
+        //        break;
+        //}
+		
+		drop_x = marker_x;
+		drop_y = marker_y;
         // Checks if the placement of the block is alright for the object  
         if (!place_meeting(drop_x, drop_y, Pickup_Parent)) {
 			// Checks if there are any other instances of the held block before attempting a merge 
@@ -111,6 +125,9 @@ if (key_pickup) {
 				// as a troop. This is temporary until we add reviving
 				if inst.object_index == obj_fallen_enemy {
 					inst.place();
+				}
+				else {
+					inst.hp = held_hp;
 				}
 			}
 			if (instance_exists(drop_marker)){
