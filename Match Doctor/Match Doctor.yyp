@@ -60,6 +60,7 @@
     {"id":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
     {"id":{"name":"room_tiletest_forest","path":"rooms/room_tiletest_forest/room_tiletest_forest.yy",},},
     {"id":{"name":"room_tiletest_ice","path":"rooms/room_tiletest_ice/room_tiletest_ice.yy",},},
+    {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"merge_objects","path":"scripts/merge_objects/merge_objects.yy",},},
     {"id":{"name":"scr_enemy_type_stats","path":"scripts/scr_enemy_type_stats/scr_enemy_type_stats.yy",},},
     {"id":{"name":"scr_status","path":"scripts/scr_status/scr_status.yy",},},
@@ -100,6 +101,7 @@
     {"id":{"name":"spr_tiles_ice","path":"sprites/spr_tiles_ice/spr_tiles_ice.yy",},},
     {"id":{"name":"spr_tiles_iceblock","path":"sprites/spr_tiles_iceblock/spr_tiles_iceblock.yy",},},
     {"id":{"name":"spr_tiles_path","path":"sprites/spr_tiles_path/spr_tiles_path.yy",},},
+    {"id":{"name":"Sprite34","path":"sprites/Sprite34/Sprite34.yy",},},
     {"id":{"name":"ts_cliff","path":"tilesets/ts_cliff/ts_cliff.yy",},},
     {"id":{"name":"ts_ice","path":"tilesets/ts_ice/ts_ice.yy",},},
     {"id":{"name":"ts_path","path":"tilesets/ts_path/ts_path.yy",},},
@@ -111,7 +113,6 @@
     {"roomId":{"name":"room_tiletest_forest","path":"rooms/room_tiletest_forest/room_tiletest_forest.yy",},},
     {"roomId":{"name":"room_tiletest_ice","path":"rooms/room_tiletest_ice/room_tiletest_ice.yy",},},
     {"roomId":{"name":"room_startup","path":"rooms/room_startup/room_startup.yy",},},
-
   ],
   "templateType":"game",
   "TextureGroups":[
