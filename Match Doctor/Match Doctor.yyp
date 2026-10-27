@@ -30,7 +30,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"Match Doctor",
   "resources":[
@@ -73,6 +73,10 @@
     {"id":{"name":"spr_enemy1_dead","path":"sprites/spr_enemy1_dead/spr_enemy1_dead.yy",},},
     {"id":{"name":"spr_enemy1_fly","path":"sprites/spr_enemy1_fly/spr_enemy1_fly.yy",},},
     {"id":{"name":"spr_enemy2_fly","path":"sprites/spr_enemy2_fly/spr_enemy2_fly.yy",},},
+    {"id":{"name":"spr_enemy3_fly","path":"sprites/spr_enemy3_fly/spr_enemy3_fly.yy",},},
+    {"id":{"name":"spr_enemy4_fly","path":"sprites/spr_enemy4_fly/spr_enemy4_fly.yy",},},
+    {"id":{"name":"spr_enemy5_fly","path":"sprites/spr_enemy5_fly/spr_enemy5_fly.yy",},},
+    {"id":{"name":"spr_enemy6_fly","path":"sprites/spr_enemy6_fly/spr_enemy6_fly.yy",},},
     {"id":{"name":"spr_objects_grass1","path":"sprites/spr_objects_grass1/spr_objects_grass1.yy",},},
     {"id":{"name":"spr_objects_mushroom1","path":"sprites/spr_objects_mushroom1/spr_objects_mushroom1.yy",},},
     {"id":{"name":"spr_objects_mushroom2","path":"sprites/spr_objects_mushroom2/spr_objects_mushroom2.yy",},},
