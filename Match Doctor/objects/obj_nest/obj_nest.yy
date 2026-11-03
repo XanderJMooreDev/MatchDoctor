@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_objects_nest",
-    "path":"sprites/spr_objects_nest/spr_objects_nest.yy",
+    "name":"spr_objects_woodsnest",
+    "path":"sprites/spr_objects_woodsnest/spr_objects_woodsnest.yy",
   },
   "spriteMaskId":null,
   "visible":true,
