@@ -1,8 +1,6 @@
 image_xscale = 2;
 image_yscale = 2;
 
-show_debug_message(stage);
-
 status = "None";
 status_cooldown = 0;
 status_max_cooldown = 0;

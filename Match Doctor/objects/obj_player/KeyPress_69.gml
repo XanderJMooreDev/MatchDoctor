@@ -118,7 +118,8 @@ if (key_pickup) {
 				inst = instance_create_layer(drop_x, drop_y, "Characters", held_block,
 				{
 					type: held_type,
-					stage: held_stage
+					stage: held_stage,
+					sprite_index: held_sprite
 				});
 				
 				// After creating an enemy object, we try to place it alive

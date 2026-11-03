@@ -50,7 +50,7 @@ spawn_wave = function() {
 }
 
 check_wave_dead = function() {	
-	if global.living_enemies <= 0 && 
+	if global.living_enemies <= 0 && n != 0 &&
 	wave + 1 < array_length(enemies_by_wave[area]) {
 		n = 0;
 		wave++;
@@ -62,6 +62,7 @@ check_wave_dead = function() {
 }
 
 next_area = function() {
+	fireworks = 0;
 	wave = 0;
 	n = 0;
 	area++;

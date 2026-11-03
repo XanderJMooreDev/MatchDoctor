@@ -32,7 +32,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"Match Doctor",
   "resources":[
@@ -40,6 +40,7 @@
     {"id":{"name":"obj_debug_manager","path":"objects/obj_debug_manager/obj_debug_manager.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_fallen_enemy","path":"objects/obj_fallen_enemy/obj_fallen_enemy.yy",},},
+    {"id":{"name":"obj_game_manager","path":"objects/obj_game_manager/obj_game_manager.yy",},},
     {"id":{"name":"obj_grass1","path":"objects/obj_grass1/obj_grass1.yy",},},
     {"id":{"name":"obj_mushroom1","path":"objects/obj_mushroom1/obj_mushroom1.yy",},},
     {"id":{"name":"obj_mushroom2","path":"objects/obj_mushroom2/obj_mushroom2.yy",},},
@@ -97,6 +98,7 @@
     {"id":{"name":"spr_objects_tree1","path":"sprites/spr_objects_tree1/spr_objects_tree1.yy",},},
     {"id":{"name":"spr_objects_tree2","path":"sprites/spr_objects_tree2/spr_objects_tree2.yy",},},
     {"id":{"name":"spr_objects_woodsnest","path":"sprites/spr_objects_woodsnest/spr_objects_woodsnest.yy",},},
+    {"id":{"name":"spr_pause_ui","path":"sprites/spr_pause_ui/spr_pause_ui.yy",},},
     {"id":{"name":"spr_player_dance","path":"sprites/spr_player_dance/spr_player_dance.yy",},},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},},
     {"id":{"name":"spr_player_run_down","path":"sprites/spr_player_run_down/spr_player_run_down.yy",},},

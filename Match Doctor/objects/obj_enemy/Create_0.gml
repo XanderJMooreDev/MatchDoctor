@@ -49,7 +49,6 @@ pathfind = function() {
 		x -= moveSpeed;
 		
 		// Stops code if the condition is met
-		show_debug_message("Dead end");
 		return;
 	}
 	

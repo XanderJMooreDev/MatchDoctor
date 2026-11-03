@@ -7,6 +7,11 @@ function status_applied(projectile, defender) {
 	if projectile.type == defender.status {
 		return;
 	}
+	else if defender.status != "None" {
+		with (defender) {
+			status_remove();
+		}
+	}
 	
 	switch projectile.type {
 		case "Freeze":
@@ -15,7 +20,7 @@ function status_applied(projectile, defender) {
 			defender.status_duration = 300;
 			
 			if (defender.object_index == obj_enemy) {
-				defender.moveSpeed /= .5;
+				defender.moveSpeed /= 2;
 			}
 			else if (defender.object_index == obj_temp_ally) {
 				defender.maxCooldown *= 1.5;
@@ -69,8 +74,7 @@ function status_remove() {
 	switch status {
 		case "Freeze":
 			if (object_index == obj_enemy) {
-				status = "Freeze";
-				moveSpeed /= .5;
+				moveSpeed *= 2;
 			}
 			else if (object_index == obj_temp_ally) {
 				maxCooldown /= 1.5;

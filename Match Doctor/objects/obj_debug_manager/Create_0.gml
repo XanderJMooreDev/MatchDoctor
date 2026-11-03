@@ -20,6 +20,8 @@ check_reset = function() {
 check_audio = function() {
 	if volumeControl {
 		audio_stop_all();
+		
+		audio_master_gain(0);
 	}
 }
 

@@ -10,7 +10,7 @@ if fireworks < 6 {
 	
 	alarm[0] = 60;
 }
-else {
-	fireworks = 0;
-	next_area();
+else {	
+	obj_game_manager.selecting_bird = true;
+	obj_game_manager.game_paused = true;
 }

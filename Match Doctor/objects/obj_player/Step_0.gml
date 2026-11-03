@@ -1,3 +1,7 @@
+if obj_game_manager.game_paused {
+	return;
+}
+
 read_controls();
 move();
 switch_anims();
