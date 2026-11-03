@@ -116,3 +116,8 @@ switch_anims = function() {
 		sprite_index = spr_player_idle
 	}
 }
+
+// Info Menu Variables
+info_Layer = layer_get_id("InfoLayer");
+infoVis = false;
+layer_set_visible(info_Layer, false)

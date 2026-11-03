@@ -34,6 +34,7 @@
   },
   "name":"Match Doctor",
   "resources":[
+    {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
     {"id":{"name":"drop_marker","path":"objects/drop_marker/drop_marker.yy",},},
     {"id":{"name":"obj_debug_manager","path":"objects/obj_debug_manager/obj_debug_manager.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
