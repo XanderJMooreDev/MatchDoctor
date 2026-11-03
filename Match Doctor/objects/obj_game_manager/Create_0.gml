@@ -17,7 +17,8 @@ check_pause = function() {
 	pauseControl = keyboard_check_pressed(vk_enter);
 	
 	if object_exists(obj_game_manager) && pauseControl {
-		obj_game_manager.game_paused = !obj_game_manager.game_paused;
+		game_paused = !game_paused;
+		player_paused = !player_paused;
 	}
 }
 
