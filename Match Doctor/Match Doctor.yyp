@@ -19,6 +19,7 @@
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Effects","folderPath":"folders/Sprites/Effects.yy","name":"Effects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Enemies","folderPath":"folders/Sprites/Enemies.yy","name":"Enemies","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"UI","folderPath":"folders/Sprites/UI.yy","name":"UI","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Sprites/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Placeholder","folderPath":"folders/Sprites/Placeholder.yy","name":"Placeholder","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Sprites/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -30,7 +31,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"Match Doctor",
   "resources":[
@@ -102,6 +103,8 @@
     {"id":{"name":"spr_tiles_ice","path":"sprites/spr_tiles_ice/spr_tiles_ice.yy",},},
     {"id":{"name":"spr_tiles_iceblock","path":"sprites/spr_tiles_iceblock/spr_tiles_iceblock.yy",},},
     {"id":{"name":"spr_tiles_path","path":"sprites/spr_tiles_path/spr_tiles_path.yy",},},
+    {"id":{"name":"spr_ui_emptystar","path":"sprites/spr_ui_emptystar/spr_ui_emptystar.yy",},},
+    {"id":{"name":"spr_ui_filledstar","path":"sprites/spr_ui_filledstar/spr_ui_filledstar.yy",},},
     {"id":{"name":"Sprite34","path":"sprites/Sprite34/Sprite34.yy",},},
     {"id":{"name":"ts_cliff","path":"tilesets/ts_cliff/ts_cliff.yy",},},
     {"id":{"name":"ts_ice","path":"tilesets/ts_ice/ts_ice.yy",},},
