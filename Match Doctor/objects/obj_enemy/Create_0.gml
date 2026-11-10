@@ -23,6 +23,7 @@ create_by_type = function() {
 	moveSpeed = stats.moveSpeed;
 	maxCooldown = stats.maxCooldown;
 	rangeType = stats.rangeType;
+	scoreValue = stats.scoreValue;
 }
 
 // Assigns base stats in scr_enemy_type_stats based on the type assigned
@@ -84,6 +85,8 @@ take_damage = function(damage) {
 	
 	if hp <= 0 {
 		global.living_enemies--;
+		
+		obj_score_manager.area_score += scoreValue;
 		
 		instance_create_layer(x, y, "Characters", obj_fallen_enemy,
 		{

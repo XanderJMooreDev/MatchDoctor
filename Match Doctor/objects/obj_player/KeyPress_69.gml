@@ -108,6 +108,8 @@ if (key_pickup) {
 						show_debug_message(held_block);
 						if (temp_block != held_block) {
 							held_stage++;
+							
+							obj_score_manager.area_score += 1000 * held_stage;
 						}
 					}
 				}

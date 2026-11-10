@@ -14,6 +14,8 @@ create_by_type = function() {
 	maxHp = stats.maxHp;
 	maxCooldown = stats.maxCooldown;
 	rangeType = stats.rangeType;
+	scoreValue = stats.scoreValue;
+	stage = stats.stage;
 }
 
 create_by_type();
@@ -28,6 +30,8 @@ take_damage = function(damage) {
 	hp -= damage;
 	
 	if hp <= 0 {
+		obj_score_manager.area_score -= scoreValue / (1 + stage);
+		
 		instance_destroy();
 	}
 }
