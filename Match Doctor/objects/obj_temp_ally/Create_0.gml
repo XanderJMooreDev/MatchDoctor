@@ -1,8 +1,6 @@
 image_xscale = 2;
 image_yscale = 2;
 
-show_debug_message(stage);
-
 status = "None";
 status_cooldown = 0;
 status_max_cooldown = 0;
@@ -16,6 +14,8 @@ create_by_type = function() {
 	maxHp = stats.maxHp;
 	maxCooldown = stats.maxCooldown;
 	rangeType = stats.rangeType;
+	scoreValue = stats.scoreValue;
+	stage = stats.stage;
 }
 
 create_by_type();
@@ -30,6 +30,8 @@ take_damage = function(damage) {
 	hp -= damage;
 	
 	if hp <= 0 {
+		obj_score_manager.area_score -= scoreValue / (1 + stage);
+		
 		instance_destroy();
 	}
 }

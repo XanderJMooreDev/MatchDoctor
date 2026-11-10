@@ -1,5 +1,17 @@
 // play attack sound, can make check  for type later
-audio_play_sound(attack_sfx, 5, false);
+switch type {
+	case "Arrow":
+		audio_play_sound(arrow_sfx, 5, false);
+	case "Shock":
+		audio_play_sound(shock_sfx, 5, false);
+	case "Freeze":
+		audio_play_sound(freeze_sfx, 5, false);
+	case "Burn":
+		audio_play_sound(fire_sfx, 5, false);
+	default:
+		audio_play_sound(arrow_sfx, 5, false);
+}
+
 
 moveSpeed = 5;
 damage = 3;
@@ -13,6 +25,10 @@ apply_sprite = function() {
 	switch type {
 		case "Arrow":
 			return spr_proj_arrow;
+		case "Shock":
+			return spr_proj_shock;
+		case "Freeze":
+			return spr_proj_freeze;
 		case "Burn":
 		rotateable = false;
 			return spr_proj_fire;

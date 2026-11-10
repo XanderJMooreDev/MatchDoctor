@@ -7,6 +7,7 @@ if !debug {
 }
 
 check_debug_controls();
+
 check_audio();
 check_reset();
 check_speedup();

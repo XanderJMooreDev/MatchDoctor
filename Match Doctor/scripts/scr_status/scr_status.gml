@@ -7,13 +7,20 @@ function status_applied(projectile, defender) {
 	if projectile.type == defender.status {
 		return;
 	}
+	else if defender.status != "None" {
+		with (defender) {
+			status_remove();
+		}
+	}
 	
 	switch projectile.type {
 		case "Freeze":
+			effect_create_layer("Effects", ef_star, x, y, 2, c_teal);
+			defender.status = "Freeze";
+			defender.status_duration = 300;
+			
 			if (defender.object_index == obj_enemy) {
-				defender.status = "Freeze";
-				defender.status_duration = 300;
-				defender.moveSpeed /= .5;
+				defender.moveSpeed /= 2;
 			}
 			else if (defender.object_index == obj_temp_ally) {
 				defender.maxCooldown *= 1.5;
@@ -25,6 +32,15 @@ function status_applied(projectile, defender) {
 			defender.status_duration = 300;
 			defender.status_cooldown = 0;
 			defender.status_max_cooldown = 60;
+			
+			return;
+		case "Shock":
+			effect_create_layer("Effects", ef_star, x, y, 2, c_yellow);
+			if (defender.object_index == obj_enemy) {
+				defender.status = "Shock";
+				defender.status_duration = 300;
+			}
+			
 			return;
 	}
 }
@@ -58,8 +74,7 @@ function status_remove() {
 	switch status {
 		case "Freeze":
 			if (object_index == obj_enemy) {
-				status = "Freeze";
-				moveSpeed /= .5;
+				moveSpeed *= 2;
 			}
 			else if (object_index == obj_temp_ally) {
 				maxCooldown /= 1.5;

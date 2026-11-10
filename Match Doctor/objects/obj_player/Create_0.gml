@@ -1,8 +1,13 @@
 gpu_set_tex_filter(false);
 
+held_block = noone;
+
 // Sets & creates properties
 velocityX = 0;
 velocityY = 0;
+
+marker_x = 0;
+marker_y = 0;
 
 held_type = "Owl";
 
@@ -116,3 +121,8 @@ switch_anims = function() {
 		sprite_index = spr_player_idle
 	}
 }
+
+// Info Menu Variables
+info_Layer = layer_get_id("InfoLayer");
+infoVis = false;
+layer_set_visible(info_Layer, false)

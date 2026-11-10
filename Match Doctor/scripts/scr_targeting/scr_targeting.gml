@@ -49,6 +49,10 @@ function shoot_foe(targetable_objects) {
 		return;
 	}
 	
+	if status == "Shock" && irandom_range(1, 10) == 1 {
+		return;
+	}
+	
 	// Calls a function from above to find the nearest foe
 	nearest_target = find_nearest(targetable_objects, x, y);
 	
