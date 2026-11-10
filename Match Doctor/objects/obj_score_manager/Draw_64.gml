@@ -1,7 +1,8 @@
+draw_set_font(Font1);
 draw_set_colour(c_white);
-draw_set_halign(fa_left);
+draw_set_halign(fa_right);
 
-draw_text_ext_transformed(4, 0, area_score, 0, 1000, 1.5, 1.5, 0);
+draw_text_ext_transformed(camera_get_view_width(camera_get_active()) - 4, 0, area_score, 0, 1000, 1.5, 1.5, 0);
 
 ui_offset = (8 * (100 - end_screen_frame));
 
@@ -16,10 +17,11 @@ draw_sprite_ext(spr_temp_path, 0, room_width / 2, room_height / 2 - ui_offset,
 6, 8, 0, c_white, 1);
 
 for (i = 0; i < 3; i++) {
-	draw_sprite_ext(spr_player_dance, i < star_count(), room_width / 2 + (i - 1) * 100, 
+	draw_sprite_ext(spr_ui_star, i < star_count(), room_width / 2 + (i - 1) * 100, 
 	-200 + room_height / 2 - ui_offset, 2, 2, 0, c_white, 1);
 }
 
+draw_set_font(Font1);
 draw_set_colour(c_green);
 draw_set_halign(fa_center);
 
