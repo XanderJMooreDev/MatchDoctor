@@ -11,8 +11,6 @@ status_duration = 0;
 take_damage = function(damage) {
 	hp -= damage;
 	
-	obj_score_manager.area_score -= 200;
-	
 	if hp <= 0 {
 		instance_destroy();
 	}

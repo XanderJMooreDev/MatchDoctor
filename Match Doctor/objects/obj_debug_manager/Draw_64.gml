@@ -3,7 +3,6 @@ if !debug {
 }
 
 draw_set_colour(c_red);
-draw_set_halign(fa_left);
 
 draw_text_ext_transformed(0, 0, 
 string_concat(game_get_speed(gamespeed_fps) / 60, "x Speed"),
