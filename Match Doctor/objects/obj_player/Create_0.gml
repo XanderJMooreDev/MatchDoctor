@@ -126,3 +126,6 @@ switch_anims = function() {
 info_Layer = layer_get_id("InfoLayer");
 infoVis = false;
 layer_set_visible(info_Layer, false)
+
+hold_timer = 0;
+hold_duration = 3 * game_get_speed(gamespeed_fps); // 3 seconds

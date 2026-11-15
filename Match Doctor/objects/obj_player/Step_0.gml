@@ -35,3 +35,18 @@ if (is_Holding && instance_exists(drop_marker_id)) {
 	drop_marker_id.x = marker_x;
     drop_marker_id.y = marker_y;
 }
+
+if (keyboard_check(ord("E"))) {
+    hold_timer += 1;
+
+    if (hold_timer >= hold_duration) {
+        // Your action goes here (e.g., charge attack, open menu)
+        show_debug_message("Key held for 3 seconds!");
+        
+        // Reset timer so it doesn't trigger every single frame after 3 seconds
+        hold_timer = 0; 
+    }
+} else {
+    // Reset timer immediately if the player lets go early
+    hold_timer = 0;
+}
