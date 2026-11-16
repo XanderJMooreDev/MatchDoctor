@@ -24,7 +24,7 @@ function merge_objects(placed_block, merging_blocks){
 									merging_blocks.object_index);
 				// Starts to check if the blocks are close enough together to merge.
 				// If they are, adds that block to the array and begins the loop again
-				if (point_distance(blocks_to_merge[i].x, blocks_to_merge[i].y, 
+				if (point_distance(blocks_to_merge[0].x, blocks_to_merge[0].y, 
 					nearest_block.x, nearest_block.y) < 110){
 					array_push(blocks_to_merge, nearest_block);
 				// If not, reactivates all of the blocks and sends back the original

@@ -36,6 +36,7 @@ if (is_Holding && instance_exists(drop_marker_id)) {
     drop_marker_id.y = marker_y;
 }
 
+// If the player is holding E, start the timer
 if (keyboard_check(ord("E"))) {
     hold_timer += 1;
 
@@ -49,4 +50,14 @@ if (keyboard_check(ord("E"))) {
 } else {
     // Reset timer immediately if the player lets go early
     hold_timer = 0;
+}
+
+// If the player is holding Y, dance and stop movement 
+if (keyboard_check(ord("Y"))) {
+	dance_anims();
+	walkSpeed = 0;
+	runSpeed = 0;
+} else {
+	walkSpeed = 4;
+	runSpeed = 5;
 }
