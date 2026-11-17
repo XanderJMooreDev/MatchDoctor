@@ -18,6 +18,13 @@ end_screen = function() {
 	update_high_score();
 	end_screen_transition = true;
 	
+	if obj_game_manager.lost {
+		obj_game_manager.consecutive_losses++;
+	}
+	else {
+		obj_game_manager.consecutive_losses = 0;
+	}
+	
 	instance_create_layer(-1000, y, "UI", obj_continue_button);
 }
 
