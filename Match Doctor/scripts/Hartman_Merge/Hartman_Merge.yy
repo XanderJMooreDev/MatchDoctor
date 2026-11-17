@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Hartman_Merge",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Hartman_Merge",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

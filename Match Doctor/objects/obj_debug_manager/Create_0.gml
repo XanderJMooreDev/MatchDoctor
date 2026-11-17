@@ -57,7 +57,8 @@ check_make_hartman_bird = function() {
 			type: "Hartman",
 			stage: 0,
 			image_xscale: 2,
-			image_yscale: 2
+			image_yscale: 2,
+			merge_amount: 2
 		});
 	}
 }
