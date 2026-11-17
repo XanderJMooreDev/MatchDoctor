@@ -30,5 +30,5 @@ draw_text_ext_transformed(room_width / 2, -140 + room_height / 2 - ui_offset, ar
 
 draw_set_colour(c_black);
 
-draw_text_ext_transformed(room_width / 2, -90 + room_height / 2 - ui_offset, generate_message(star_count()),
+draw_text_ext_transformed(room_width / 2, -90 + room_height / 2 - ui_offset, review_message,
 32, 340, 1, 1, 0);

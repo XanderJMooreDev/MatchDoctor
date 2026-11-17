@@ -1,6 +1,7 @@
 level_high_scores = array_create(array_length(obj_wave_manager.rooms_by_area));
 area_score = 0;
 end_screen_transition = false;
+review_message = "";
 
 end_screen_frame = 0;
 
@@ -25,6 +26,8 @@ end_screen = function() {
 		obj_game_manager.consecutive_losses = 0;
 	}
 	
+	review_message = generate_message(star_count());
+	
 	instance_create_layer(-1000, y, "UI", obj_continue_button);
 	
 	if (obj_game_manager.consecutive_losses >= 1) {
@@ -39,6 +42,10 @@ end_screen_update = function() {
 }
 
 star_count = function() {
+	if obj_game_manager.lost {
+		return 0;
+	}
+	
 	if area_score >=  4000 {
 		return 3;
 	}
