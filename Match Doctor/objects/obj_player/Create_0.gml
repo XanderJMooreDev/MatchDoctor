@@ -75,6 +75,14 @@ move = function() {
 }
 
 space_free = function(placeX, placeY) {
+	if (placeX > room_width) || (placeX < 0) {
+		return false;
+	}
+	
+	if (placeY > room_height) || (placeY < 0) {
+		return false;
+	}
+	
 	for (i = 0; i < array_length(solids); i++) {
 		if place_meeting(placeX, placeY, solids[i]) {
 			return false;
@@ -104,6 +112,14 @@ attempt_move = function(moveX, moveY) {
 		if place_meeting(x, y + moveY, solids[i]) {
 			wallY = true;
 		}
+	}
+	
+	if (x + moveX > room_width) || (x + moveX < 0) {
+		wallX = true;
+	}
+	
+	if (y + moveY > room_height) || (y + moveY < 0) {
+		wallY = true;
 	}
 	
 	if !wallX {
