@@ -26,6 +26,10 @@ end_screen = function() {
 	}
 	
 	instance_create_layer(-1000, y, "UI", obj_continue_button);
+	
+	if (obj_game_manager.consecutive_losses >= 1) {
+		instance_create_layer(-1200, y, "UI", obj_rescue_button);
+	}
 }
 
 end_screen_update = function() {

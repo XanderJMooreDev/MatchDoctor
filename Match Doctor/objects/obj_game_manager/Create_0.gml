@@ -3,6 +3,7 @@ player_paused = false;
 selecting_bird = false;
 lost = false;
 consecutive_losses = 0;
+self.held_type = "Owl";
 
 var held_block;
 var held_type;
@@ -32,9 +33,6 @@ select_bird = function(block) {
 		held_stage = block.stage;
 		held_sprite = block.sprite_index;
 	}
-	else {
-		held_block = noone;
-	}
 	
 	if (!lost) {
 		selecting_bird = false;
@@ -53,7 +51,7 @@ select_bird = function(block) {
 
 check_for_death = function() {
 	if (instance_number(obj_player) == 1) && ((instance_number(obj_temp_ally) == 0 && instance_number(drop_marker) == 0) || 
-	(instance_number(obj_nest) == 0)) {
+	(instance_number(obj_nest) == 0)) && !game_paused {
 		lost = true;
 		game_paused = true;
 		

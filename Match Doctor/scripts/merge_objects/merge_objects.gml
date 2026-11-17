@@ -10,7 +10,7 @@ function merge_objects(placed_block, merging_blocks){
 	// Checks the number of blocks needed to merge that type of block, 
 	// then sees if the amount of instances of that type are less then 
 	// the needed amount.
-	if placed_block.type = "Hartman"{
+	if placed_block.type = "Hartman" {
 		hartman_merge(placed_block, merging_blocks);
 	}
 	

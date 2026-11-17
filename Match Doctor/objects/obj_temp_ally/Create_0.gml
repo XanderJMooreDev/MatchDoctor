@@ -10,10 +10,14 @@ status_duration = 0;
 create_by_type = function() {
 	stats = EnemyStats(type, stage);
 	
-	sprite_index = stats.sprite;
 	maxHp = stats.maxHp;
 	maxCooldown = stats.maxCooldown;
-	rangeType = stats.rangeType;
+	
+	if (type != "Hartman" || stage != 1) {
+		rangeType = stats.rangeType;
+		sprite_index = stats.sprite;
+	}
+	
 	scoreValue = stats.scoreValue;
 	stage = stats.stage;
 }
