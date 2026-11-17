@@ -1,8 +1,6 @@
 function hartman_merge(hartman, element) {
 	show_debug_message("Hartman merge");
 	hartman_element = element.rangeType;
-	show_debug_message(hartman.hartman_element);
-	hartman.stage = 1;
 	
 	inst = instance_create_layer(drop_marker.x, drop_marker.y, "Characters", hartman,
 	{

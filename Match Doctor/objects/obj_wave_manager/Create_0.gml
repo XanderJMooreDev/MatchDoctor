@@ -66,6 +66,8 @@ next_area = function() {
 	wave = 0;
 	n = 0;
 	area++;
+	global.living_enemies = 0;
+	obj_game_manager.lost = false;
 	room = rooms_by_area[area];
 }
 
@@ -73,5 +75,7 @@ repeat_area = function() {
 	fireworks = 0;
 	wave = 0;
 	n = 0;
+	global.living_enemies = 0;
+	obj_game_manager.lost = false;
 	room = rooms_by_area[area];
 }

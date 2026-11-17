@@ -10,6 +10,7 @@ marker_x = 0;
 marker_y = 0;
 
 held_type = "Owl";
+held_stage = 0;
 
 walkSpeed = 4;
 runSpeed = 5;

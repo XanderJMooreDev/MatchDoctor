@@ -5,9 +5,9 @@ message_options = [
 
 // Zero-star messages
 [
-	"My children won't stop crying. At least, the ones left. Would not recommend.",
-	"I need the address for his \"bird college\". I'm going to write a strongly worded letter. Do we still have a carrier pigeon that isn't dead??",
-	"This guy is so bad, I hope the people who made this game fail their class."
+	//"My children won't stop crying. At least, the ones left. Would not recommend.",
+	//"I need the address for his \"bird college\". I'm going to write a strongly worded letter. Do we still have a carrier pigeon that isn't dead??",
+	"This Doctor is so bad, I hope the people who made this game fail their class."
 ],
 
 // One-star messages
