@@ -31,10 +31,16 @@ if (key_pickup) {
 	        if (block != noone) {
 	            is_Holding = true;
 	            // Get the object's type and store it 
+				held_element = "Unneeded";
 	            held_block = block.object_index;
 				held_type = block.type;
 				held_stage = block.stage;
 				held_sprite = block.sprite_index;
+				
+				if held_type == "Hartman" {
+					held_element = block.rangeType;
+				}
+				
 				if (!instance_exists(drop_marker)) {
 				    drop_marker_id = instance_create_layer(x, y, "Characters", drop_marker, {
 						sprite_index: held_sprite,
@@ -106,8 +112,8 @@ if (key_pickup) {
 						show_debug_message("Near is: ", nearest_block);		
 						show_debug_message(nearest_block); */
 						temp_block = held_block;
-						if (held_type = "Hartman") {
-							held_block = hartman_merge(held_block, nearest_block);
+						if (held_type == "Hartman") {
+							hartman_merge(held_block, nearest_block);
 						} else {
 							held_block = merge_objects(held_block, nearest_block);
 						}
@@ -126,7 +132,8 @@ if (key_pickup) {
 				{
 					type: held_type,
 					stage: held_stage,
-					sprite_index: held_sprite
+					sprite_index: held_sprite,
+					rangeType: held_element
 				});
 				
 				// After creating an enemy object, we try to place it alive
@@ -138,7 +145,7 @@ if (key_pickup) {
 					inst.hp = held_hp;
 				}
 			}
-			if (instance_exists(drop_marker)){
+			if (instance_exists(drop_marker)) {
 				instance_destroy(drop_marker);
 			}
 			// Setting original values back so they can be used again 

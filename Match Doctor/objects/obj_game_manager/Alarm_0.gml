@@ -1,4 +1,5 @@
 obj_player.held_block = held_block;
+obj_player.held_element = "Unneeded";
 obj_player.held_type = held_type;
 obj_player.held_stage = held_stage;
 obj_player.held_sprite = held_sprite;

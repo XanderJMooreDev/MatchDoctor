@@ -2,7 +2,7 @@ area = 0;
 wave = 0;
 
 fireworks = 0;
-rainbow = [ c_red, c_orange, c_yellow, c_green,
+rainbow = [ c_red, c_orange, c_yellow, c_lime,
 c_blue, c_purple ];
 
 global.living_enemies = 0;
@@ -26,7 +26,7 @@ ice_wave = [
 	[ "Owl", "Owl", "Bluebird", "Bluebird" ]
 ];
 
-enemies_by_wave = [ woods_wave, woods_wave, woods_wave, ice_wave, ice_wave, ice_wave ];
+enemies_by_wave = [ woods_wave, woods_wave, woods_wave, ice_wave, ice_wave, ice_wave, woods_wave ];
 
 spawn_wave = function() {	
 	spawn_cooldown--;
@@ -66,6 +66,8 @@ next_area = function() {
 	wave = 0;
 	n = 0;
 	area++;
+	global.living_enemies = 0;
+	obj_game_manager.lost = false;
 	room = rooms_by_area[area];
 }
 
@@ -73,5 +75,7 @@ repeat_area = function() {
 	fireworks = 0;
 	wave = 0;
 	n = 0;
+	global.living_enemies = 0;
+	obj_game_manager.lost = false;
 	room = rooms_by_area[area];
 }

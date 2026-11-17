@@ -38,7 +38,7 @@
     {"$GMObjectProperty":"v2","%Name":"merge_amount","filters":[],"listItems":[],"multiselect":false,"name":"merge_amount","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"3","varType":1,},
     {"$GMObjectProperty":"v2","%Name":"type","filters":[],"listItems":[],"multiselect":false,"name":"type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Owl","varType":2,},
     {"$GMObjectProperty":"v2","%Name":"stage","filters":[],"listItems":[],"multiselect":false,"name":"stage","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
-    {"$GMObjectProperty":"v2","%Name":"hartman_type","filters":[],"listItems":[],"multiselect":false,"name":"hartman_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"None","varType":2,},
+    {"$GMObjectProperty":"v2","%Name":"hartman_element","filters":[],"listItems":[],"multiselect":false,"name":"hartman_element","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"None","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

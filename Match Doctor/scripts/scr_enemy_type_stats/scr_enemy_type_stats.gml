@@ -19,7 +19,8 @@ function EnemyStats(name, stage) {
 		new EnemyType("Bluebird", 0, spr_enemy5_fly, spr_enemy5_dead, 60, 40, 1.5, "Freeze", 200),
 		new EnemyType("Cardinal", 0, spr_enemy3_fly, spr_enemy3_dead, 65, 30, 2, "Burn", 200),
 		new EnemyType("Finch", 0, spr_enemy6_fly, spr_enemy6_dead, 42, 20, 2.5, "Shock", 250),
-		new EnemyType("Hartman", 0, spr_hartman_green, spr_enemy1_dead, 200, 40, 1, "Arrow", 1000)
+		new EnemyType("Hartman", 0, spr_hartman_green, spr_enemy1_dead, 200, 40, 1, "Arrow", 1000),
+		new EnemyType("Hartman", 1, spr_hartman_yellow, spr_enemy1_dead, 220, 30, 1, "Arrow", 200)
 	];
 	
 	for (i = 0; i < array_length(enemy_types); i++) {
