@@ -11,3 +11,4 @@ check_debug_controls();
 check_audio();
 check_reset();
 check_speedup();
+check_make_hartman_bird();

@@ -74,6 +74,20 @@ move = function() {
 	attempt_move(velocityX, velocityY);
 }
 
+space_free = function(placeX, placeY) {
+	for (i = 0; i < array_length(solids); i++) {
+		if place_meeting(placeX, placeY, solids[i]) {
+			return false;
+		}
+	}
+	
+	if place_meeting(placeX, placeY, tile_path) {
+		return false;
+	}
+	
+	return true;
+}
+
 attempt_move = function(moveX, moveY) {
 	// For every solid object listed, the player will check if they
 	// are meet those objects where they want to move. If they're not,

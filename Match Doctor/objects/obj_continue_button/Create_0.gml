@@ -3,6 +3,10 @@ go_to_ui_menu = function() {
 	y = -200 + room_height - obj_score_manager.ui_offset;
 }
 
+select_sprite = function() {
+	image_index = obj_game_manager.lost;
+}
+
 allow_click = function() {
 	
 	if abs(mouse_x - x) < 30 &&
@@ -15,7 +19,12 @@ allow_click = function() {
 			obj_score_manager.end_screen_frame = 0;
 			obj_score_manager.area_score = 0;
 			
-			obj_game_manager.selecting_bird = true;
+			if (!obj_game_manager.lost) {
+				obj_game_manager.selecting_bird = true;
+			}
+			else {
+				obj_game_manager.select_bird(noone);
+			}
 			
 			instance_destroy();
 		}

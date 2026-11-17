@@ -83,6 +83,10 @@ if (key_pickup) {
 		
 		drop_x = marker_x;
 		drop_y = marker_y;
+		
+		if (!space_free(drop_x, drop_y)) {
+			return;
+		}
         // Checks if the placement of the block is alright for the object  
         if (!place_meeting(drop_x, drop_y, Pickup_Parent)) {
 			// Checks if there are any other instances of the held block before attempting a merge 

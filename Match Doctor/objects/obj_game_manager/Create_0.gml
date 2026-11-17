@@ -1,6 +1,8 @@
 game_paused = false;
 player_paused = false;
 selecting_bird = false;
+lost = false;
+consecutive_losses = 0;
 
 var held_block;
 var held_type;
@@ -23,12 +25,38 @@ check_pause = function() {
 }
 
 select_bird = function(block) {
-	held_block = block.object_index;
-	held_type = block.type;
-	held_stage = block.stage;
-	held_sprite = block.sprite_index;
+	
+	if (block != noone) {
+		held_block = block.object_index;
+		held_type = block.type;
+		held_stage = block.stage;
+		held_sprite = block.sprite_index;
+	}
+	else {
+		held_block = noone;
+	}
+	
+	if (!lost) {
+		selecting_bird = false;
+		obj_wave_manager.next_area();
+	}
+	else {
+		obj_wave_manager.repeat_area();
+	}
 	
 	game_paused = false;
-	obj_wave_manager.next_area();
-	alarm[0] = 1;
+	
+	if (block != noone) {
+		alarm[0] = 1;
+	}
+}
+
+check_for_death = function() {
+	if (instance_number(obj_player) == 1) && ((instance_number(obj_temp_ally) == 0 && instance_number(drop_marker) == 0) || 
+	(instance_number(obj_nest) == 0)) {
+		lost = true;
+		game_paused = true;
+		
+		obj_score_manager.end_screen();
+	}
 }

@@ -68,3 +68,10 @@ next_area = function() {
 	area++;
 	room = rooms_by_area[area];
 }
+
+repeat_area = function() {
+	fireworks = 0;
+	wave = 0;
+	n = 0;
+	room = rooms_by_area[area];
+}
