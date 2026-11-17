@@ -7,6 +7,7 @@ check_debug_controls = function() {
 	keyboard_check_pressed(vk_right);
 	resetControl = keyboard_check_pressed(vk_backspace);
 	volumeControl = keyboard_check_pressed(ord("1"));
+	hartmanControl = keyboard_check_pressed(ord("2"));
 }
 
 check_reset = function() {
@@ -46,6 +47,19 @@ check_speedup = function() {
 	}
 	else {
 		return;
+	}
+}
+
+check_make_hartman_bird = function() {
+	if hartmanControl && instance_exists(obj_player) {
+		instance_create_layer(obj_player.x + 64, obj_player.y, "Characters", obj_temp_ally,
+		{
+			type: "Hartman",
+			stage: 0,
+			image_xscale: 2,
+			image_yscale: 2,
+			merge_amount: 2
+		});
 	}
 }
 

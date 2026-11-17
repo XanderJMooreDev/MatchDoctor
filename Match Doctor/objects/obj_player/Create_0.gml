@@ -74,6 +74,20 @@ move = function() {
 	attempt_move(velocityX, velocityY);
 }
 
+space_free = function(placeX, placeY) {
+	for (i = 0; i < array_length(solids); i++) {
+		if place_meeting(placeX, placeY, solids[i]) {
+			return false;
+		}
+	}
+	
+	if place_meeting(placeX, placeY, tile_path) {
+		return false;
+	}
+	
+	return true;
+}
+
 attempt_move = function(moveX, moveY) {
 	// For every solid object listed, the player will check if they
 	// are meet those objects where they want to move. If they're not,
@@ -122,7 +136,15 @@ switch_anims = function() {
 	}
 }
 
+dance_anims = function() {
+	sprite_index = spr_player_dance
+}
+
 // Info Menu Variables
 info_Layer = layer_get_id("InfoLayer");
 infoVis = false;
 layer_set_visible(info_Layer, false)
+
+// Variables for the timer, used for holding E
+hold_timer = 0;
+hold_duration = 3 * game_get_speed(gamespeed_fps); // 3 seconds

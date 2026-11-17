@@ -10,6 +10,10 @@ function merge_objects(placed_block, merging_blocks){
 	// Checks the number of blocks needed to merge that type of block, 
 	// then sees if the amount of instances of that type are less then 
 	// the needed amount.
+	if placed_block.type = "Hartman"{
+		hartman_merge(placed_block, merging_blocks);
+	}
+	
 	if ((placed_block.merge_amount <= (instance_number(placed_block)+1)) != true){
 		return placed_block;
 	}
@@ -24,7 +28,7 @@ function merge_objects(placed_block, merging_blocks){
 									merging_blocks.object_index);
 				// Starts to check if the blocks are close enough together to merge.
 				// If they are, adds that block to the array and begins the loop again
-				if (point_distance(blocks_to_merge[i].x, blocks_to_merge[i].y, 
+				if (point_distance(blocks_to_merge[0].x, blocks_to_merge[0].y, 
 					nearest_block.x, nearest_block.y) < 110){
 					array_push(blocks_to_merge, nearest_block);
 				// If not, reactivates all of the blocks and sends back the original

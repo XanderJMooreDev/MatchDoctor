@@ -12,7 +12,7 @@ n = 0;
 spawn_cooldown = 300;
 max_spawn_cooldown = 30;
 
-rooms_by_area = [ room_woods, room_ice, room_startup ];
+rooms_by_area = [ room_woods_1, room_woods_2, room_woods_3, room_ice_1, room_ice_2, room_ice_3, room_startup ];
 
 woods_wave = [
 	[ "Finch", "Cardinal", "Cardinal" ],
@@ -26,7 +26,7 @@ ice_wave = [
 	[ "Owl", "Owl", "Bluebird", "Bluebird" ]
 ];
 
-enemies_by_wave = [ woods_wave, ice_wave ];
+enemies_by_wave = [ woods_wave, woods_wave, woods_wave, ice_wave, ice_wave, ice_wave ];
 
 spawn_wave = function() {	
 	spawn_cooldown--;
@@ -66,5 +66,12 @@ next_area = function() {
 	wave = 0;
 	n = 0;
 	area++;
+	room = rooms_by_area[area];
+}
+
+repeat_area = function() {
+	fireworks = 0;
+	wave = 0;
+	n = 0;
 	room = rooms_by_area[area];
 }

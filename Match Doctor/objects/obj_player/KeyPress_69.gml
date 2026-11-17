@@ -83,6 +83,10 @@ if (key_pickup) {
 		
 		drop_x = marker_x;
 		drop_y = marker_y;
+		
+		if (!space_free(drop_x, drop_y)) {
+			return;
+		}
         // Checks if the placement of the block is alright for the object  
         if (!place_meeting(drop_x, drop_y, Pickup_Parent)) {
 			// Checks if there are any other instances of the held block before attempting a merge 
@@ -90,7 +94,6 @@ if (key_pickup) {
 				// Checks where the nearest object is to the dropped object, if they are close enough
 				// sends it to be merged. Must be done before object is placed.
 				nearest_block = instance_nearest(drop_x, drop_y, held_block.object_index);
-				show_debug_message(nearest_block);
 				if (nearest_block != noone)
 				{
 					// Checks how the actual distance the dropped block is to the 
@@ -103,9 +106,11 @@ if (key_pickup) {
 						show_debug_message("Near is: ", nearest_block);		
 						show_debug_message(nearest_block); */
 						temp_block = held_block;
-						held_block = merge_objects(held_block, nearest_block);
-						show_debug_message(temp_block);
-						show_debug_message(held_block);
+						if (held_type = "Hartman") {
+							held_block = hartman_merge(held_block, nearest_block);
+						} else {
+							held_block = merge_objects(held_block, nearest_block);
+						}
 						if (temp_block != held_block) {
 							held_stage++;
 							
