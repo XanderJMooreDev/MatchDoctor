@@ -12,7 +12,9 @@ for (i = 0; i < array_length(level_high_scores); i++) {
 }
 
 update_high_score = function() {
-	level_high_scores[obj_wave_manager.area] = area_score;
+	if (area_score > level_high_scores[obj_wave_manager.area]) {
+		level_high_scores[obj_wave_manager.area] = area_score;
+	}
 }
 
 end_screen = function() {
@@ -29,6 +31,7 @@ end_screen = function() {
 	review_message = generate_message(star_count());
 	
 	instance_create_layer(-1000, y, "UI", obj_continue_button);
+	instance_create_layer(-1000, y, "UI", obj_home_button);
 	
 	if (obj_game_manager.consecutive_losses >= 1) {
 		instance_create_layer(-1200, y, "UI", obj_rescue_button);
@@ -55,4 +58,23 @@ star_count = function() {
 	}
 	
 	return floor(area_score / 1000);
+}
+
+
+
+get_major_area_score = function(area_num) {
+	temp = 0;
+	place = 0;
+	
+	for (i = 0; i <= area_num; i++) {
+		for (j = 0; j < obj_wave_manager.major_area_lengths[i]; j++) {
+			if (i == area_num) {
+				temp += level_high_scores[place];
+			}
+			
+			place++;
+		}
+	}
+	
+	return temp;
 }

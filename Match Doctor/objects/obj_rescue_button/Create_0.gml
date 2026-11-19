@@ -9,8 +9,8 @@ select_sprite = function() {
 
 allow_click = function() {
 	
-	if abs(mouse_x - x) < 60 &&
-	abs(mouse_y - y) < 60 {
+	if abs(mouse_x - x) < 50 &&
+	abs(mouse_y - y) < 50 {
 		image_xscale = 1.1;
 		image_yscale = 1.1;
 		

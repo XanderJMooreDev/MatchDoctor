@@ -4,6 +4,9 @@ selecting_bird = false;
 lost = false;
 consecutive_losses = 0;
 self.held_type = "Owl";
+darkness = 0;
+
+self.held_block = noone;
 
 var held_block;
 var held_type;
@@ -36,17 +39,19 @@ select_bird = function(block) {
 	
 	if (!lost) {
 		selecting_bird = false;
-		obj_wave_manager.next_area();
+		
+		if obj_wave_manager.check_if_major_area_end(obj_wave_manager.area + 1) {
+			room = room_world_map;
+		}
+		else {
+			obj_wave_manager.next_area();
+		}
 	}
 	else {
 		obj_wave_manager.repeat_area();
 	}
 	
 	game_paused = false;
-	
-	if (block != noone) {
-		alarm[0] = 1;
-	}
 }
 
 check_for_death = function() {
@@ -56,5 +61,11 @@ check_for_death = function() {
 		game_paused = true;
 		
 		obj_score_manager.end_screen();
+	}
+}
+
+fade_in = function() {
+	if (darkness > 0) {
+		darkness -= 2;
 	}
 }
