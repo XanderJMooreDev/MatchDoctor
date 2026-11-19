@@ -9,11 +9,7 @@ function merge_objects(placed_block, merging_blocks){
 	
 	// Checks the number of blocks needed to merge that type of block, 
 	// then sees if the amount of instances of that type are less then 
-	// the needed amount.
-	if placed_block.type = "Hartman" {
-		hartman_merge(placed_block, merging_blocks);
-	}
-	
+	// the needed amount.	
 	if ((placed_block.merge_amount <= (instance_number(placed_block)+1)) != true){
 		return placed_block;
 	}
@@ -24,12 +20,13 @@ function merge_objects(placed_block, merging_blocks){
 				// Deactivates the current block in the array to avoid when using
 				// instance_nearest, then finds the next nearest block
 				instance_deactivate_object(blocks_to_merge[i]);
+				show_debug_message("deactiveing");
 				var nearest_block = instance_nearest(merging_blocks.x, merging_blocks.y, 
 									merging_blocks.object_index);
 				// Starts to check if the blocks are close enough together to merge.
 				// If they are, adds that block to the array and begins the loop again
-				if (point_distance(blocks_to_merge[0].x, blocks_to_merge[0].y, 
-					nearest_block.x, nearest_block.y) < 110){
+				if ((point_distance(blocks_to_merge[0].x, blocks_to_merge[0].y, 
+					nearest_block.x, nearest_block.y) < 150) && (held_type == merging_blocks.type)){
 					array_push(blocks_to_merge, nearest_block);
 				// If not, reactivates all of the blocks and sends back the original
 				} else {
@@ -46,7 +43,7 @@ function merge_objects(placed_block, merging_blocks){
 	if (variable_instance_exists(placed_block, "merger")){
 		// Checks if all of the placed_blocks and the merging blocks have the 
 		// same id, if so they send back the next step in the evolution.
-		if (placed_block.object_index == merging_blocks.object_index){
+		if (held_type == merging_blocks.type){
 			// Takes the value of the selected block and grabs what it will
 			// become, which after it will turn that string into an instance. 
 			var created_block = merging_blocks.will_become;
