@@ -34,7 +34,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"Match Doctor",
   "resources":[
@@ -97,6 +97,7 @@
     {"id":{"name":"spr_effect_death","path":"sprites/spr_effect_death/spr_effect_death.yy",},},
     {"id":{"name":"spr_enemy1_dead","path":"sprites/spr_enemy1_dead/spr_enemy1_dead.yy",},},
     {"id":{"name":"spr_enemy1_fly","path":"sprites/spr_enemy1_fly/spr_enemy1_fly.yy",},},
+    {"id":{"name":"spr_enemy2_dead","path":"sprites/spr_enemy2_dead/spr_enemy2_dead.yy",},},
     {"id":{"name":"spr_enemy2_fly","path":"sprites/spr_enemy2_fly/spr_enemy2_fly.yy",},},
     {"id":{"name":"spr_enemy3_dead","path":"sprites/spr_enemy3_dead/spr_enemy3_dead.yy",},},
     {"id":{"name":"spr_enemy3_fly","path":"sprites/spr_enemy3_fly/spr_enemy3_fly.yy",},},
@@ -106,6 +107,10 @@
     {"id":{"name":"spr_enemy5_fly","path":"sprites/spr_enemy5_fly/spr_enemy5_fly.yy",},},
     {"id":{"name":"spr_enemy6_dead","path":"sprites/spr_enemy6_dead/spr_enemy6_dead.yy",},},
     {"id":{"name":"spr_enemy6_fly","path":"sprites/spr_enemy6_fly/spr_enemy6_fly.yy",},},
+    {"id":{"name":"spr_enemy7_dead","path":"sprites/spr_enemy7_dead/spr_enemy7_dead.yy",},},
+    {"id":{"name":"spr_enemy7_fly","path":"sprites/spr_enemy7_fly/spr_enemy7_fly.yy",},},
+    {"id":{"name":"spr_enemy8_dead","path":"sprites/spr_enemy8_dead/spr_enemy8_dead.yy",},},
+    {"id":{"name":"spr_enemy8_fly","path":"sprites/spr_enemy8_fly/spr_enemy8_fly.yy",},},
     {"id":{"name":"spr_hartman_blue","path":"sprites/spr_hartman_blue/spr_hartman_blue.yy",},},
     {"id":{"name":"spr_hartman_brown","path":"sprites/spr_hartman_brown/spr_hartman_brown.yy",},},
     {"id":{"name":"spr_hartman_green","path":"sprites/spr_hartman_green/spr_hartman_green.yy",},},
