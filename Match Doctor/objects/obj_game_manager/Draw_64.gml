@@ -11,3 +11,5 @@ if game_paused {
 		2, 2, 0);
 	}
 }
+
+draw_sprite_ext(spr_temp_block, 0, room_width / 2, room_height / 2, 200, 100, 0, c_black, darkness / 100);

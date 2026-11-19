@@ -1,8 +1,8 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_objects_woodsnest",
-  "bboxMode":0,
-  "bbox_bottom":30,
+  "bboxMode":2,
+  "bbox_bottom":25,
   "bbox_left":6,
   "bbox_right":41,
   "bbox_top":1,

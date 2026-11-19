@@ -1,5 +1,5 @@
 go_to_ui_menu = function() {
-	x = room_width / 2;
+	x = room_width / 2 - 70;
 	y = -200 + room_height - obj_score_manager.ui_offset;
 }
 
@@ -9,8 +9,8 @@ select_sprite = function() {
 
 allow_click = function() {
 	
-	if abs(mouse_x - x) < 30 &&
-	abs(mouse_y - y) < 30 {
+	if abs(mouse_x - x) < 50 &&
+	abs(mouse_y - y) < 50 {
 		image_xscale = 1.1;
 		image_yscale = 1.1;
 		

@@ -14,6 +14,9 @@ max_spawn_cooldown = 30;
 
 rooms_by_area = [ room_woods_1, room_woods_2, room_woods_3, room_ice_1, room_ice_2, room_ice_3, room_startup ];
 
+major_area_lengths = [ 3, 3, 1 ];
+major_area_names = [ "Robin Woods", "Icicle Tundra", "Placeholder" ];
+
 woods_wave = [
 	[ "Finch", "Cardinal", "Cardinal" ],
 	[ "Owl", "Bluebird" ],
@@ -78,4 +81,48 @@ repeat_area = function() {
 	global.living_enemies = 0;
 	obj_game_manager.lost = false;
 	room = rooms_by_area[area];
+}
+
+start_area = function(area_num) {
+	fireworks = 0;
+	wave = 0;
+	n = 0;
+	
+	area = 0;
+	
+	for (i = 0; i < area_num; i++) {
+		area += major_area_lengths[i];
+	}
+	
+	global.living_enemies = 0;
+	obj_game_manager.lost = false;
+	room = rooms_by_area[area];
+}
+
+get_area = function(area_num) {
+	temp_offset = 0;
+	temp = 0;
+	
+	for (i = 0; i < area_num; i++) {
+		temp_offset++;
+		
+		if temp_offset >= major_area_lengths[temp] {
+			temp_offset = 0;
+			temp++;
+		}
+	}
+	
+	return temp;
+}
+
+check_if_major_area_end = function(area_num) {
+	temp = 0;
+	i = 0;
+	
+	while (temp < area_num) {
+		temp += major_area_lengths[i];
+		i++;
+	}
+	
+	return temp == area_num;
 }
