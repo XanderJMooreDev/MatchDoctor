@@ -1,5 +1,5 @@
 go_to_ui_menu = function() {
-	x = room_width / 2 - 70;
+	x = room_width / 2 + 70;
 	y = -200 + room_height - obj_score_manager.ui_offset;
 }
 

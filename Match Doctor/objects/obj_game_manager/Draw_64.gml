@@ -1,5 +1,7 @@
 if game_paused {
 	if player_paused {
+		draw_sprite_ext(spr_temp_block, 0, room_width / 2, room_height / 2, 100,
+		300, 0, c_black, .3);
 		draw_sprite_ext(spr_pause_ui, 0, room_width - 80, 
 		40, 1, 1, 0, c_white, 1);
 	}

@@ -2,6 +2,10 @@ draw_set_font(Font1);
 draw_set_colour(c_white);
 draw_set_halign(fa_right);
 
+if (room == room_world_map || room == room_startup) {
+	return;
+}
+
 draw_text_ext_transformed(camera_get_view_width(camera_get_active()) - 4, 0, area_score, 0, 1000, 1.5, 1.5, 0);
 
 ui_offset = (8 * (100 - end_screen_frame));

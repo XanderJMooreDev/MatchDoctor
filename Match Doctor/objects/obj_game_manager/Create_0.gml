@@ -25,7 +25,26 @@ check_pause = function() {
 	if object_exists(obj_game_manager) && pauseControl {
 		game_paused = !game_paused;
 		player_paused = !player_paused;
+		
+		if player_paused {
+			create_pause_buttons();
+		}
+		else {
+			obj_bird_menu_manager.menu_open = false;
+			
+			with (obj_bird_menu_button) {
+				instance_destroy();
+			}
+			
+			with (obj_menu_close_button) {
+				instance_destroy();
+			}
+		}
 	}
+}
+
+create_pause_buttons = function() {
+	instance_create_layer(-100, - 1000, "UI", obj_bird_menu_button);
 }
 
 select_bird = function(block) {
