@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_enemy6_fly",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":28,
   "bbox_left":4,
   "bbox_right":27,
