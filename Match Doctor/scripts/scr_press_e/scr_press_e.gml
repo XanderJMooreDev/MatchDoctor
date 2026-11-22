@@ -1,6 +1,4 @@
-var key_pickup = keyboard_check_pressed(ord("E"));
-
-if (key_pickup) {
+function scr_press_e(){
     // Get the last direction player faced before checking for block 
     var check_x = x;
     var check_y = y;
@@ -96,7 +94,7 @@ if (key_pickup) {
         // Checks if the placement of the block is alright for the object  
         if (!place_meeting(drop_x, drop_y, Pickup_Parent)) {
 			// Checks if there are any other instances of the held block before attempting a merge 
-			if (instance_exists(held_block)){
+			if (should_merge && instance_exists(held_block)){
 				// Checks where the nearest object is to the dropped object, if they are close enough
 				// sends it to be merged. Must be done before object is placed.
 				nearest_block = instance_nearest(drop_x, drop_y, held_block.object_index);

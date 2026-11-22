@@ -163,5 +163,8 @@ infoVis = false;
 layer_set_visible(info_Layer, false)
 
 // Variables for the timer, used for holding E
-hold_timer = 0;
-hold_duration = 3 * game_get_speed(gamespeed_fps); // 3 seconds
+e_hold_timer = 0;
+hold_duration = 50;
+should_merge = false;
+
+e_was_pressed = false;

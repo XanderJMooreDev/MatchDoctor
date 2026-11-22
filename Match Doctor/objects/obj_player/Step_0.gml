@@ -36,26 +36,32 @@ if (is_Holding && instance_exists(drop_marker_id)) {
     drop_marker_id.y = marker_y;
 }
 
-// If holding E, start the timer and increase every step
-if (keyboard_check(ord("E"))) {
-    hold_timer += 1;
+// Check if e is held
+var key_held = keyboard_check(ord("E"));
 
-    if (hold_timer == hold_duration) {
-        show_debug_message("Key held");
-        
-        // Reset timer so it doesn't trigger every frame after 3 seconds
-        hold_timer = 0; 
-		if (hold_timer = 3) {
-			show_debug_message("Key held for 3 seconds!");
-		}
-    }
-} else {
-    // Reset timer if the player lets go
-    hold_timer = 0;
+// Increase the timer while e is held
+if (key_held) {
+    e_hold_timer++;
 }
 
-// If the player is holding Y, dance and stop movement 
-if (keyboard_check(ord("Y"))) {
+// Detect when e is released
+if (!key_held && e_was_pressed) {
+
+    // Determine whether this was a hold or a tap
+    should_merge = (e_hold_timer >= hold_duration);
+
+    // Trigger the e action
+    scr_press_e();
+
+    // Reset the timer
+    e_hold_timer = 0;
+}
+
+// Remember the previous key state
+e_was_pressed = key_held;
+
+// This checks for merge dancing and if the player wants to do the Y dance 
+if ((key_held && e_hold_timer > 8 && is_Holding) || keyboard_check(ord("Y"))) {
 	dance_anims();
 	walkSpeed = 0;
 	runSpeed = 0;
