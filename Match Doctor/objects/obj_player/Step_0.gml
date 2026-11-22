@@ -36,10 +36,10 @@ if (is_Holding && instance_exists(drop_marker_id)) {
     drop_marker_id.y = marker_y;
 }
 
-// Check if e is held
+// Check if E is held
 var key_held = keyboard_check(ord("E"));
 
-// Increase the timer while e is held
+// Increase the timer while E is held
 if (key_held) {
     e_hold_timer++;
 }
@@ -47,13 +47,12 @@ if (key_held) {
 // Detect when e is released
 if (!key_held && e_was_pressed) {
 
-    // Determine whether this was a hold or a tap
+    // Determine if it is a hold or a tap
     should_merge = (e_hold_timer >= hold_duration);
-
-    // Trigger the e action
+    // Trigger the E function
     scr_press_e();
 
-    // Reset the timer
+    // Resetting the timer
     e_hold_timer = 0;
 }
 
