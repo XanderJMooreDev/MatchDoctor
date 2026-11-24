@@ -29,6 +29,7 @@ is_Holding = false;
 held_Block = noone;
 facing = "left";
 nearest_block = noone;
+placement_mode = "Automatic";
 
 // Uses keyboard_check to set the directional controls. I'd like to
 // eventually develop a obj_control_manager to allow for controller
@@ -38,7 +39,13 @@ read_controls = function() {
 	downControl = keyboard_check(ord("S"));
 	leftControl = keyboard_check(ord("A"));
 	rightControl = keyboard_check(ord("D"));
+	
 	runControl = keyboard_check(ord("M"));
+	
+	upAimControl = keyboard_check(vk_up);
+	downAimControl = keyboard_check(vk_down);
+	leftAimControl = keyboard_check(vk_left);
+	rightAimControl = keyboard_check(vk_right);
 	
 	// Sets the directional speed based on controls and base speed. If you
 	// hold the run button, your speed is based on runSpeed. 
@@ -54,17 +61,55 @@ read_controls = function() {
 		velocityY = walkSpeed * inputY;
 	}
 	
-	// This is to check which direction the player is facing at any given time
-	// mostly to help with block placement. 
-	if (inputX > 0) {
-		facing = "right";
-	} else if (inputX < 0) {
-		facing = "left";
-	} else if (inputY > 0) {
-		facing = "down";
-	} else if (inputY < 0) {
-		facing = "up";
-	}	
+	if placement_mode == "Auto" || held_block == noone || (placement_mode == "Selective" && (inputX != 0 || inputY != 0)) {
+		// This is to check which direction the player is facing at any given time
+		// mostly to help with block placement. 
+		if (inputX > 0) {
+			facing = "right";
+		} else if (inputX < 0) {
+			facing = "left";
+		} else if (inputY > 0) {
+			facing = "down";
+		} else if (inputY < 0) {
+			facing = "up";
+		}
+	}
+	else if placement_mode == "Twinstick" || placement_mode == "Selective" {
+		aimInputX = rightAimControl - leftAimControl;
+		aimInputY = downAimControl - upAimControl;
+		
+		// If using twinstick mode, you can aim independent of movement
+		if (aimInputX > 0) {
+			facing = "right";
+		} else if (aimInputX < 0) {
+			facing = "left";
+		} else if (aimInputY > 0) {
+			facing = "down";
+		} else if (aimInputY < 0) {
+			facing = "up";
+		}
+	}
+	else if placement_mode == "Mouse" {
+		if abs(mouse_x - x) > abs(mouse_y - y) {
+			aimInputX = (mouse_x - x) / abs(mouse_x - x);
+			aimInputY = 0;
+		}
+		else {
+			aimInputX = 0;
+			aimInputY = (mouse_y - y) / abs(mouse_y - y);
+		}
+		
+		// You can also aim using the mouse position relative to the player
+		if (aimInputX > 0) {
+			facing = "right";
+		} else if (aimInputX < 0) {
+			facing = "left";
+		} else if (aimInputY > 0) {
+			facing = "down";
+		} else if (aimInputY < 0) {
+			facing = "up";
+		}
+	}
 }
 
 move = function() {
