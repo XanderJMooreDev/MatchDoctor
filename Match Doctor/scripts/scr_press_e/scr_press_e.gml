@@ -51,39 +51,17 @@ function scr_press_e(){
 				if variable_instance_exists(block, "hp") {
 					held_hp = block.hp;
 				}
-				
-				show_debug_message(held_block.id);
 	            // Remove the original object that was there 
 	            with (block) {
 	                instance_destroy();
 	            }
-			// Debugging messages 
-	            /* show_debug_message("Block picked up"); */ 
-	        } /*else {
-	            show_debug_message("No block found");
-	        }*/
+	        } 
 	    }
 	}
     // Dropping the block 
     else {
         var drop_x = x;
         var drop_y = y;
-		// Finds which way the player is facing then makes the x or y 
-		// be correct for placing the block. 
-        //switch (facing) {
-        //    case "up":
-        //        drop_y -= 74;
-        //        break;
-        //    case "down":
-        //        drop_y += 74;
-        //        break;
-        //    case "left":
-        //        drop_x -= 74;
-        //        break;
-        //    case "right":
-        //        drop_x += 74;
-        //        break;
-        //}
 		
 		drop_x = marker_x;
 		drop_y = marker_y;
@@ -104,11 +82,6 @@ function scr_press_e(){
 					// nearest block of the same type. 
 					if (point_distance(drop_x, drop_y, nearest_block.x, nearest_block.y) < 96)
 					{
-						// Debug messages 
-						/* show_debug_message("Held is: ", held_block);
-						show_debug_message(held_block);
-						show_debug_message("Near is: ", nearest_block);		
-						show_debug_message(nearest_block); */
 						temp_block = held_block;
 						if (held_type == "Hartman") {
 							hartman_merge(held_block, nearest_block);
@@ -143,16 +116,13 @@ function scr_press_e(){
 					inst.hp = held_hp;
 				}
 			}
+			// Destroying drop_marker when unneeded
 			if (instance_exists(drop_marker)) {
 				instance_destroy(drop_marker);
 			}
 			// Setting original values back so they can be used again 
             is_Holding = false;
             held_block = noone;
-
-            /*show_debug_message("Block placed"); */
-        } /* else {
-            show_debug_message("Cant put block here");
-        } */
+        }
     }
 }

@@ -20,7 +20,9 @@ function EnemyStats(name, stage = 0) {
 		new EnemyType("Cardinal", 0, spr_enemy3_fly, spr_enemy3_dead, 65, 30, 2, "Burn", 200),
 		new EnemyType("Finch", 0, spr_enemy6_fly, spr_enemy6_dead, 42, 20, 2.5, "Shock", 250),
 		new EnemyType("Hartman", 0, spr_hartman_green, spr_enemy1_dead, 200, 40, 1, "Arrow", 1000),
-		new EnemyType("Hartman", 1, spr_hartman_yellow, spr_enemy1_dead, 220, 30, 1, "Varies", 200)
+		new EnemyType("Hartman", 1, spr_hartman_yellow, spr_enemy1_dead, 220, 30, 1, "Varies", 200),
+		new EnemyType("Snowy Owl", 0, spr_enemy7_fly, spr_enemy1_dead, 50, 30, 2, "Arrow", 100),
+		new EnemyType("Snowy Owl", 1, spr_enemy8_fly, spr_enemy1_dead, 150, 10, 2, "Arrow", 300)
 	];
 	
 	// Allows you to fetch the nth bird from the list

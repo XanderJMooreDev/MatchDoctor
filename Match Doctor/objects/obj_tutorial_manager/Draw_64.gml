@@ -13,6 +13,10 @@ if current_screen = 4 {
 	draw_text_ext_transformed(room_width / 2, room_height * (7/8), "Press Space to continue", 32, 200,
 	1.5, 1.5, 0);
 }
+else {
+	draw_text_ext_transformed(room_width / 2, room_height * (7/8), "Navigate with Arrow Keys, Press Space to skip", 32, 200,
+	1.5, 1.5, 0);
+}
 
 draw_set_valign(fa_top);
 
