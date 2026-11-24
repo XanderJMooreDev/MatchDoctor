@@ -2,7 +2,7 @@ draw_set_font(Font1);
 draw_set_colour(c_white);
 draw_set_halign(fa_right);
 
-if (room == room_world_map || room == room_startup) {
+if (room == room_world_map || room == room_startup || room == room_tutorial) {
 	return;
 }
 
