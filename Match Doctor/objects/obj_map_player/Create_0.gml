@@ -1,24 +1,20 @@
 walkSpeed = 4;
 runSpeed = 5;
 
+cm = obj_control_manager;
+
 image_xscale = 2;
 image_yscale = 2;
 
 solids = [ obj_map_npc, obj_select_level ];
 
-read_controls = function() {
-	upControl = keyboard_check(ord("W"));
-	downControl = keyboard_check(ord("S"));
-	leftControl = keyboard_check(ord("A"));
-	rightControl = keyboard_check(ord("D"));
-	runControl = keyboard_check(ord("M"));
-	
+read_controls = function() {	
 	// Sets the directional speed based on controls and base speed. If you
 	// hold the run button, your speed is based on runSpeed. 
-	inputX = (rightControl - leftControl);
-	inputY = (downControl - upControl);
+	inputX = cm.controller.get_joystick_x();
+	inputY = cm.controller.get_joystick_y();
 	
-	if runControl {
+	if cm.controller.get_control_input_hold("run") {
 		velocityX = runSpeed * inputX;
 		velocityY = runSpeed * inputY;
 	}

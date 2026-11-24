@@ -1,4 +1,4 @@
-if room == room_world_map {
+if room == room_world_map || room == room_tutorial || room == room_startup {
 	return;
 }
 
