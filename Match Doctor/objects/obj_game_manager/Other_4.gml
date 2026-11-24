@@ -8,7 +8,7 @@ if room == room_world_map {
 	return;
 }
 
-if room != room_startup {
+if room != room_startup && room != room_tutorial {
 	darkness = 100;
 	
 	if (held_block != noone) {

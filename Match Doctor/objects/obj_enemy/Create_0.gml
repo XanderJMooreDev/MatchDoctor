@@ -1,6 +1,8 @@
 // Placeholder to make them face left
 image_xscale *= -1;
 
+multiplier = 0;
+
 // Specific hitbox offset to line up
 centralizeOffset = 60;
 
@@ -13,6 +15,8 @@ status = "None";
 status_cooldown = 0;
 status_max_cooldown = 0;
 status_duration = 0;
+
+multiplier = 0;
 
 create_by_type = function() {
 	stats = EnemyStats(type, stage);
@@ -43,11 +47,11 @@ pathfind = function() {
 	
 	// If you have path to the left, you will take it. Checks from the top and bottom
 	// of the sprite to line up better with the center
-	if place_meeting(x - centralizeOffset, y - centralizeOffset, 
-	path_object)
-	&& place_meeting(x - centralizeOffset, y + centralizeOffset, 
-	path_object) {
+	if (check_block(x - 16, y, 
+	path_object)) || x > room_width - 30 {
 		x -= moveSpeed;
+		
+		multiplier = 0;
 		
 		// Stops code if the condition is met
 		return;
@@ -55,29 +59,49 @@ pathfind = function() {
 	
 	offsetY = 0;
 	
-	// Determines the nearest path that leads to the left, continually checking
-	// upwards and downwards at increasing distances
-	while !place_meeting(x - centralizeOffset, y - centralizeOffset - offsetY, path_object) &&
-	!place_meeting(x - centralizeOffset, y + centralizeOffset + offsetY, path_object) {
-		offsetY++;
-	}
+	can_go_up = false;
+	can_go_down = false;
 	
-	// Determines whether the detected path was up or down
-	multiplier = place_meeting(x - centralizeOffset, y + centralizeOffset + offsetY, path_object)
-	- place_meeting(x - centralizeOffset, y - centralizeOffset - offsetY, path_object);
-	
-	// If somehow the paths are exactly equidistant, it just picks randomly
 	if multiplier == 0 {
-		if irandom_range(1, 2) == 1 {
-			multiplier = 1;
+		// Continually checks for path to the left until the path vertically ends. 
+		// If the path doesn't extend further, for now, we just stop moving. 
+		while !check_block(x - 16, y - offsetY, path_object) &&
+		check_block(x, y - offsetY, path_object) {
+			offsetY += 16;
+		}
+		
+		can_go_down = check_block(x - 16, y - offsetY, path_object);
+		
+		while !check_block(x - 16, y + offsetY, path_object) &&
+		check_block(x, y + offsetY, path_object) {
+			offsetY += 16;
+		}
+		
+		can_go_up = (check_block(x - 16, y + offsetY, path_object));
+		
+		if (can_go_down && irandom_range(0, 1) == 0) || !can_go_up {
+			multiplier = -1;
 		}
 		else {
-			multiplier = -1;
+			multiplier = 1;
 		}
 	}
 	
 	// Moves in the desired direction
 	y += moveSpeed * multiplier;
+}
+
+check_block = function(cx, cy, obj) {
+	spacer = 24;
+	
+	if position_meeting(cx + spacer, cy + spacer, obj) &&
+	position_meeting(cx - spacer, cy - spacer, obj) &&
+	position_meeting(cx - spacer, cy + spacer, obj) &&
+	position_meeting(cx + spacer, cy - spacer, obj) {
+		return true;
+	}
+	
+	return false;
 }
 
 take_damage = function(damage) {
