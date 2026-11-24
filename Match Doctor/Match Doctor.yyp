@@ -10,6 +10,7 @@
   },
   "defaultScriptType":1,
   "Folders":[
+    {"$GMFolder":"","%Name":"Videos","folderPath":"folders/Videos.yy","name":"Videos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Decorations","folderPath":"folders/Objects/Decorations.yy","name":"Decorations","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Managers","folderPath":"folders/Objects/Managers.yy","name":"Managers","resourceType":"GMFolder","resourceVersion":"2.0",},
