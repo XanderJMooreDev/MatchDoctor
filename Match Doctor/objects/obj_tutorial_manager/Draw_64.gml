@@ -14,7 +14,7 @@ if current_screen = 4 {
 	1.5, 1.5, 0);
 }
 else {
-	draw_text_ext_transformed(room_width / 2, room_height * (7/8), "Navigate with Arrow Keys, Press Space to skip", 32, 200,
+	draw_text_ext_transformed(room_width / 2, room_height * (7/8), "Navigate with Arrow Keys, Press Enter to skip", 32, 200,
 	1.5, 1.5, 0);
 }
 

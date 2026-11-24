@@ -44,6 +44,7 @@
     {"id":{"name":"obj_bird_menu_button","path":"objects/obj_bird_menu_button/obj_bird_menu_button.yy",},},
     {"id":{"name":"obj_bird_menu_manager","path":"objects/obj_bird_menu_manager/obj_bird_menu_manager.yy",},},
     {"id":{"name":"obj_continue_button","path":"objects/obj_continue_button/obj_continue_button.yy",},},
+    {"id":{"name":"obj_control_manager","path":"objects/obj_control_manager/obj_control_manager.yy",},},
     {"id":{"name":"obj_debug_manager","path":"objects/obj_debug_manager/obj_debug_manager.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_fallen_enemy","path":"objects/obj_fallen_enemy/obj_fallen_enemy.yy",},},

@@ -6,6 +6,8 @@ consecutive_losses = 0;
 self.held_type = "Owl";
 darkness = 0;
 
+cm = obj_control_manager;
+
 self.held_block = noone;
 
 var held_block;
@@ -14,15 +16,17 @@ var held_stage;
 var held_sprite;
 
 check_pause = function() {
+	if !instance_exists(obj_control_manager) {
+		return;
+	}
+	
 	// If the game was paused by itself (for various reasons),
 	// don't let the player unpause
 	if player_paused == false && game_paused == true {
 		return;
 	}
 	
-	pauseControl = keyboard_check_pressed(vk_enter);
-	
-	if object_exists(obj_game_manager) && pauseControl {
+	if object_exists(obj_game_manager) && cm.controller.get_control_input_tap("pause") {
 		game_paused = !game_paused;
 		player_paused = !player_paused;
 		

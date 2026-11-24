@@ -37,7 +37,7 @@ if (is_Holding && instance_exists(drop_marker_id)) {
 }
 
 // Check if E is held
-var key_held = keyboard_check(ord("E"));
+var key_held = cm.controller.get_control_input_hold("pickup");
 
 // Increase the timer while E is held
 if (key_held) {
@@ -60,7 +60,7 @@ if (!key_held && e_was_pressed) {
 e_was_pressed = key_held;
 
 // This checks for merge dancing and if the player wants to do the Y dance 
-if ((key_held && e_hold_timer > 8 && is_Holding) || keyboard_check(ord("Y"))) {
+if ((key_held && e_hold_timer > 8 && is_Holding) || cm.controller.get_control_input_hold("dance")) {
 	dance_anims();
 	walkSpeed = 0;
 	runSpeed = 0;
