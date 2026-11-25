@@ -23,8 +23,15 @@ scroll_tutorial = function() {
 		current_frame = 0;
 	}
 	
-	if cm.controller.get_control_input_tap("pause") {
-		room = room_world_map;
+	if cm.controller.get_control_input_tap("pickup") {
+		if room == room_tutorial {
+			room = room_world_map;
+		}
+		else {
+			obj_game_manager.create_pause_buttons();
+			
+			instance_destroy();
+		}
 	}
 }
 

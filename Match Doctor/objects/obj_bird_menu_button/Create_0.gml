@@ -13,7 +13,7 @@ allow_click = function() {
 			// Open bird menu
 			obj_bird_menu_manager.menu_open = true;
 			instance_create_layer(x, y, "UI", obj_menu_close_button);
-			instance_destroy();
+			obj_game_manager.delete_pause_buttons();
 		}
 	}
 	else {

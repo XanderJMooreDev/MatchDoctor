@@ -11,7 +11,7 @@ if fireworks < 6 {
 	alarm[0] = 60;
 }
 else {
-	obj_game_manager.game_paused = true;
+	obj_game_manager.pause_type = "End Screen";
 	
 	obj_score_manager.update_high_score();
 	obj_score_manager.end_screen();

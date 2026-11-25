@@ -10,11 +10,11 @@ draw_text_ext_transformed(room_width * (1/4), room_height / 2, texts[current_scr
 if current_screen = 4 {
 	frame_scale = 1.5;
 	
-	draw_text_ext_transformed(room_width / 2, room_height * (7/8), "Press Space to continue", 32, 200,
+	draw_text_ext_transformed(room_width / 2, room_height * (7/8), "Press E to continue", 32, 200,
 	1.5, 1.5, 0);
 }
 else {
-	draw_text_ext_transformed(room_width / 2, room_height * (7/8), "Navigate with Arrow Keys, Press Enter to skip", 32, 200,
+	draw_text_ext_transformed(room_width / 2, room_height * (7/8), "Navigate with Arrow Keys, Press E to skip", 32, 200,
 	1.5, 1.5, 0);
 }
 

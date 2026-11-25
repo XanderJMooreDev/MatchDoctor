@@ -1,6 +1,4 @@
-game_paused = false;
-player_paused = false;
-selecting_bird = false;
+pause_type = "Unpaused";
 lost = false;
 consecutive_losses = 0;
 self.held_type = "Owl";
@@ -15,6 +13,16 @@ var held_type;
 var held_stage;
 var held_sprite;
 
+create_managers = function() {
+	instance_create_layer(0, 0, "Instances", obj_wave_manager);
+	instance_create_layer(0, 0, "Instances", obj_control_manager);
+	instance_create_layer(0, 0, "Instances", obj_score_manager);
+	instance_create_layer(0, 0, "Instances", obj_debug_manager);
+	instance_create_layer(0, 0, "Instances", obj_bird_menu_manager);
+}
+
+create_managers();
+
 check_pause = function() {
 	if !instance_exists(obj_control_manager) {
 		return;
@@ -22,18 +30,18 @@ check_pause = function() {
 	
 	// If the game was paused by itself (for various reasons),
 	// don't let the player unpause
-	if player_paused == false && game_paused == true {
+	if pause_type != "Player" && pause_type != "Unpaused" {
 		return;
 	}
 	
 	if object_exists(obj_game_manager) && cm.controller.get_control_input_tap("pause") {
-		game_paused = !game_paused;
-		player_paused = !player_paused;
-		
-		if player_paused {
+		if pause_type == "Unpaused" {
+			pause_type = "Player";
+			
 			create_pause_buttons();
 		}
 		else {
+			pause_type = "Unpaused";
 			obj_bird_menu_manager.menu_open = false;
 			
 			with (obj_bird_menu_button) {
@@ -43,12 +51,24 @@ check_pause = function() {
 			with (obj_menu_close_button) {
 				instance_destroy();
 			}
+			
+			with (obj_tutorial_manager) {
+				instance_destroy();
+			}
 		}
 	}
 }
 
 create_pause_buttons = function() {
 	instance_create_layer(-100, - 1000, "UI", obj_bird_menu_button);
+	instance_create_layer(-100, - 1000, "UI", obj_tutorial_menu_button);
+	instance_create_layer(-100, - 1000, "UI", obj_home_menu_button);
+}
+
+delete_pause_buttons = function() {
+	instance_destroy(obj_bird_menu_button);
+	instance_destroy(obj_tutorial_menu_button);
+	instance_destroy(obj_home_menu_button);
 }
 
 select_bird = function(block) {
@@ -61,8 +81,6 @@ select_bird = function(block) {
 	}
 	
 	if (!lost) {
-		selecting_bird = false;
-		
 		if obj_wave_manager.check_if_major_area_end(obj_wave_manager.area + 1) {
 			room = room_world_map;
 		}
@@ -74,14 +92,14 @@ select_bird = function(block) {
 		obj_wave_manager.repeat_area();
 	}
 	
-	game_paused = false;
+	pause_type = "Unpaused";
 }
 
 check_for_death = function() {
 	if (instance_number(obj_player) == 1) && ((instance_number(obj_temp_ally) == 0 && instance_number(drop_marker) == 0) || 
-	(instance_number(obj_nest) == 0)) && !game_paused {
+	(instance_number(obj_nest) == 0)) && pause_type == "Unpaused" {
 		lost = true;
-		game_paused = true;
+		pause_type = "End Screen";
 		
 		obj_score_manager.end_screen();
 	}

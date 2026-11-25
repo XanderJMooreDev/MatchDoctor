@@ -1,4 +1,4 @@
-if obj_game_manager.game_paused {
+if obj_game_manager.pause_type != "Unpaused" {
 	return;
 }
 

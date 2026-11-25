@@ -1,7 +1,6 @@
-if obj_game_manager.game_paused {
+if obj_game_manager.pause_type == "Selecting Bird" {
 	if abs(mouse_x - x) < 30 &&
-	abs(mouse_y - y) < 30 &&
-	obj_game_manager.selecting_bird {
+	abs(mouse_y - y) < 30 {
 		image_xscale = 2.5;
 		image_yscale = 2.5;
 	}

@@ -20,7 +20,7 @@ allow_click = function() {
 			obj_score_manager.area_score = 0;
 			
 			if (!obj_game_manager.lost) {
-				obj_game_manager.selecting_bird = true;
+				obj_game_manager.pause_type = "Selecting Bird";
 			}
 			else {
 				obj_game_manager.select_bird(noone);
