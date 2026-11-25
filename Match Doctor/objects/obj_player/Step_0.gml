@@ -34,6 +34,13 @@ if (is_Holding && instance_exists(drop_marker_id)) {
 	// Moves it accordingly 
 	drop_marker_id.x = marker_x;
     drop_marker_id.y = marker_y;
+	
+	if space_free(marker_x, marker_y) {
+		drop_marker_id.image_blend = c_white;
+	}
+	else {
+		drop_marker_id.image_blend = c_red;
+	}
 }
 
 // Check if E is held

@@ -110,6 +110,21 @@ move = function() {
 	attempt_move(velocityX, velocityY);
 }
 
+// Modified code from the enemy object to check if this is a valid placement
+check_block = function(cx, cy, obj) {
+	spacer = 24;
+	
+	if position_meeting(cx + spacer, cy + spacer, obj) ||
+	position_meeting(cx - spacer, cy - spacer, obj) ||
+	position_meeting(cx - spacer, cy + spacer, obj) ||
+	position_meeting(cx + spacer, cy - spacer, obj) {
+		return true;
+	}
+	
+	return false;
+}
+
+
 space_free = function(placeX, placeY) {
 	if (placeX > room_width) || (placeX < 0) {
 		return false;
@@ -120,12 +135,12 @@ space_free = function(placeX, placeY) {
 	}
 	
 	for (i = 0; i < array_length(solids); i++) {
-		if place_meeting(placeX, placeY, solids[i]) {
+		if check_block(placeX, placeY, solids[i]) {
 			return false;
 		}
 	}
 	
-	if place_meeting(placeX, placeY, tile_path) {
+	if check_block(placeX, placeY, tile_path) {
 		return false;
 	}
 	
