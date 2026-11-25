@@ -1,13 +1,17 @@
 debug = false;
 
 check_debug_controls = function() {
-	speedUpControl = keyboard_check_pressed(vk_up);
-	speedDownControl = keyboard_check_pressed(vk_down);
-	speedResetControl = keyboard_check_pressed(vk_left) ||
-	keyboard_check_pressed(vk_right);
+	speedUpControl = keyboard_check_pressed(ord("I"));
+	speedDownControl = keyboard_check_pressed(ord("K"));
+	speedResetControl = keyboard_check_pressed(ord("J")) ||
+	keyboard_check_pressed(ord("L"));
 	resetControl = keyboard_check_pressed(vk_backspace);
-	volumeControl = keyboard_check_pressed(ord("1"));
-	hartmanControl = keyboard_check_pressed(ord("2"));
+	volumeControl = keyboard_check_pressed(ord("O"));
+	hartmanControl = keyboard_check_pressed(ord("P"));
+	autoPlacementControl = keyboard_check_pressed(ord("1"));
+	twinstickPlacementControl = keyboard_check_pressed(ord("2"));
+	selectivePlacementControl = keyboard_check_pressed(ord("3"));
+	mousePlacementControl = keyboard_check_pressed(ord("4"));
 }
 
 check_reset = function() {
@@ -60,6 +64,24 @@ check_make_hartman_bird = function() {
 			image_yscale: 2,
 			merge_amount: 2
 		});
+	}
+}
+
+check_placement_method = function() {
+	if autoPlacementControl {
+		obj_control_manager.controller.placement_mode = "Auto";
+	}
+	
+	if twinstickPlacementControl {
+		obj_control_manager.controller.placement_mode = "Twinstick";
+	}
+	
+	if selectivePlacementControl {
+		obj_control_manager.controller.placement_mode = "Selective";
+	}
+	
+	if mousePlacementControl {
+		obj_control_manager.controller.placement_mode = "Mouse";
 	}
 }
 
